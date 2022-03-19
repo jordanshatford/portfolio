@@ -1,6 +1,6 @@
-import { createRouter, createWebHistory } from "vue-router"
-import type { RouteRecordRaw } from "vue-router"
+import { createRouter, createWebHistory, type RouteRecordRaw } from "vue-router"
 import AboutPage from "@/views/AboutPage.vue"
+import ResumePage from "@/views/ResumePage.vue"
 
 export enum RouteNameConstants {
   LANDING = "landing",
@@ -14,7 +14,7 @@ export const routes: Array<RouteRecordRaw> = [
   {
     path: "/",
     name: RouteNameConstants.LANDING,
-    component: { template: '<div></div>' },
+    component: { template: "<div></div>" },
     meta: {
       title: "Home",
     },
@@ -30,7 +30,7 @@ export const routes: Array<RouteRecordRaw> = [
   {
     path: "/resume",
     name: RouteNameConstants.RESUME,
-    component: AboutPage,
+    component: ResumePage,
     meta: {
       title: "Resume",
     },
