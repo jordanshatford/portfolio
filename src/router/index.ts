@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory, type RouteRecordRaw } from "vue-router"
 import AboutPage from "@/views/AboutPage.vue"
 import ResumePage from "@/views/ResumePage.vue"
+import PortfolioPage from "@/views/PortfolioPage.vue"
 import ContactPage from "@/views/ContactPage.vue"
 
 export enum RouteNameConstants {
@@ -39,7 +40,7 @@ export const routes: Array<RouteRecordRaw> = [
   {
     path: "/portfolio",
     name: RouteNameConstants.PORTFOLIO,
-    component: AboutPage,
+    component: PortfolioPage,
     meta: {
       title: "Portfolio",
     },
