@@ -1,7 +1,9 @@
 <template>
-  <header id="header" :class="{ 'header-top': headerTop }">
+  <header id="header" :class="{ 'header-top': top }">
     <div class="container">
-      <h1><a href="index.html">Jordan Shatford</a></h1>
+      <h1>
+        <router-link :to="RouteNameConstants.LANDING">Jordan Shatford</router-link>
+      </h1>
       <h2>I'm a <span>Software Developer</span> from Nova Scotia</h2>
       <app-nav-bar></app-nav-bar>
       <social-links></social-links>
@@ -12,8 +14,13 @@
 <script setup lang="ts">
 import AppNavBar from "@/components/AppNavBar.vue"
 import SocialLinks from "@/components/SocialLinks.vue"
+import { RouteNameConstants } from "@/router"
 
-const headerTop = false // WHENEVER CURRENT ROUTE IS NOT LANDING
+interface Props {
+  top: boolean
+}
+
+defineProps<Props>()
 </script>
 
 <style scoped lang="scss">

@@ -1,11 +1,11 @@
 <template>
   <nav id="navbar" class="navbar" :class="{ 'navbar-mobile': showMobileMenu }">
     <ul>
-      <li><a class="nav-link active" href="#header">Home</a></li>
-      <li><a class="nav-link" href="#about">About</a></li>
-      <li><a class="nav-link" href="#resume">Resume</a></li>
-      <li><a class="nav-link" href="#portfolio">Portfolio</a></li>
-      <li><a class="nav-link" href="#contact">Contact</a></li>
+      <li v-for="r in routes" :key="r.path">
+        <router-link class="nav-link" :class="{ active: r.name === route.name }" :to="r.name">{{
+          r.meta?.title
+        }}</router-link>
+      </li>
     </ul>
     <app-hamburger class="mobile-nav-toggle" v-model="showMobileMenu"></app-hamburger>
   </nav>
@@ -13,8 +13,11 @@
 
 <script setup lang="ts">
 import { ref } from "vue"
+import { useRoute } from "vue-router"
+import { routes } from "@/router"
 import AppHamburger from "@/components/AppHamburger.vue"
 
+const route = useRoute()
 const showMobileMenu = ref<boolean>(false)
 </script>
 
