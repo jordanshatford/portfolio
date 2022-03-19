@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory, type RouteRecordRaw } from "vue-router"
 import AboutPage from "@/views/AboutPage.vue"
 import ResumePage from "@/views/ResumePage.vue"
+import ContactPage from "@/views/ContactPage.vue"
 
 export enum RouteNameConstants {
   LANDING = "landing",
@@ -46,7 +47,7 @@ export const routes: Array<RouteRecordRaw> = [
   {
     path: "/contact",
     name: RouteNameConstants.CONTACT,
-    component: AboutPage,
+    component: ContactPage,
     meta: {
       title: "Contact",
     },
