@@ -1,7 +1,7 @@
 <template>
   <nav id="navbar" class="navbar" :class="{ 'navbar-mobile': showMobileMenu }">
     <ul>
-      <li v-for="r in routes" :key="r.path">
+      <li v-for="r in routes" :key="r.path" @click="showMobileMenu = false">
         <router-link class="nav-link" :class="{ active: r.name === route.name }" :to="r.name">{{
           r.meta?.title
         }}</router-link>
