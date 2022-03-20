@@ -9,7 +9,6 @@
 import { RouteNameConstants } from "@/router"
 import { useRoute } from "vue-router"
 import AppHeader from "@/components/AppHeader.vue"
-
 const route = useRoute()
 </script>
 
@@ -22,16 +21,17 @@ body {
   &::before {
     content: "";
     position: fixed;
-    background: #040404 url("@/assets/img/bg.jpg") top right no-repeat;
-    background-size: cover;
+    background-color: #18181b;
+    // background: #040404 url("@/assets/img/bg.jpg") top right no-repeat;
+    // background-size: cover;
     left: 0;
     right: 0;
     top: 0;
     height: 100vh;
     z-index: -1;
-    @media (min-width: 1024px) {
-      background-attachment: fixed;
-    }
+    // @media (min-width: 1024px) {
+    //   background-attachment: fixed;
+    // }
   }
 }
 
@@ -60,10 +60,6 @@ section.section-show {
   opacity: 1;
   padding-bottom: 45px;
 }
-section .container {
-  background: rgba(0, 0, 0, 0.9);
-  padding: 30px;
-}
 @media (max-width: 768px) {
   section {
     top: 120px;
@@ -71,34 +67,5 @@ section .container {
   section.section-show {
     top: 80px;
   }
-}
-
-.section-title h2 {
-  font-size: 14px;
-  font-weight: 500;
-  padding: 0;
-  line-height: 1px;
-  margin: 0 0 20px 0;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: #aaaaaa;
-  font-family: "Poppins", sans-serif;
-}
-.section-title h2::after {
-  content: "";
-  width: 120px;
-  height: 1px;
-  display: inline-block;
-  background: #4ceb95;
-  margin: 4px 10px;
-}
-.section-title p {
-  margin: 0;
-  margin: -15px 0 15px 0;
-  font-size: 36px;
-  font-weight: 700;
-  text-transform: uppercase;
-  font-family: "Poppins", sans-serif;
-  color: #fff;
 }
 </style>

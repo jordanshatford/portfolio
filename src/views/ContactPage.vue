@@ -56,32 +56,70 @@
     <form role="form" class="php-email-form mt-4">
       <div class="row">
         <div class="col-md-6 form-group">
-          <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required />
+          <v-input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required></v-input>
         </div>
         <div class="col-md-6 form-group mt-3 mt-md-0">
-          <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required />
+          <v-input
+            type="email"
+            class="form-control"
+            name="email"
+            id="email"
+            placeholder="Your Email"
+            required
+          ></v-input>
         </div>
       </div>
       <div class="form-group mt-3">
-        <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required />
+        <v-input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required></v-input>
       </div>
       <div class="form-group mt-3">
-        <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+        <v-textarea name="message" rows="5" placeholder="Message" required></v-textarea>
       </div>
       <div class="my-3">
         <div class="loading">Loading</div>
         <div class="error-message"></div>
         <div class="sent-message">Your message has been sent. Thank you!</div>
       </div>
-      <div class="text-center"><button type="submit">Send Message</button></div>
+      <div class="text-center"><v-button type="submit">Send Message</v-button></div>
     </form>
   </div>
 </template>
 
+<script setup lang="ts"></script>
+
 <style scoped lang="scss">
-/*--------------------------------------------------------------
-# Contact
---------------------------------------------------------------*/
+section .container {
+  background: rgba(0, 0, 0, 0.9);
+  padding: 30px;
+}
+.section-title h2 {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0;
+  line-height: 1px;
+  margin: 0 0 20px 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #aaaaaa;
+  font-family: "Poppins", sans-serif;
+}
+.section-title h2::after {
+  content: "";
+  width: 120px;
+  height: 1px;
+  display: inline-block;
+  background: #4ceb95;
+  margin: 4px 10px;
+}
+.section-title p {
+  margin: 0;
+  margin: -15px 0 15px 0;
+  font-size: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+}
 .contact .info-box {
   color: #444444;
   padding: 20px;
@@ -164,47 +202,6 @@
   border-top-color: #eee;
   -webkit-animation: animate-loading 1s linear infinite;
   animation: animate-loading 1s linear infinite;
-}
-.contact .php-email-form input,
-.contact .php-email-form textarea {
-  border-radius: 0;
-  box-shadow: none;
-  font-size: 14px;
-  background: rgba(255, 255, 255, 0.08);
-  border: 0;
-  transition: 0.3s;
-  color: #fff;
-}
-.contact .php-email-form input:focus,
-.contact .php-email-form textarea:focus {
-  background-color: rgba(255, 255, 255, 0.11);
-}
-.contact .php-email-form input::-moz-placeholder,
-.contact .php-email-form textarea::-moz-placeholder {
-  color: rgba(255, 255, 255, 0.3);
-  opacity: 1;
-}
-.contact .php-email-form input::placeholder,
-.contact .php-email-form textarea::placeholder {
-  color: rgba(255, 255, 255, 0.3);
-  opacity: 1;
-}
-.contact .php-email-form input {
-  padding: 10px 15px;
-}
-.contact .php-email-form textarea {
-  padding: 12px 15px;
-}
-.contact .php-email-form button[type="submit"] {
-  background: #18d26e;
-  border: 0;
-  padding: 10px 30px;
-  color: #fff;
-  transition: 0.4s;
-  border-radius: 4px;
-}
-.contact .php-email-form button[type="submit"]:hover {
-  background: #15bb62;
 }
 @-webkit-keyframes animate-loading {
   0% {

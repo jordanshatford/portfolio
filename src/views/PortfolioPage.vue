@@ -62,9 +62,38 @@
 </template>
 
 <style scoped lang="scss">
-/*--------------------------------------------------------------
-# Services
---------------------------------------------------------------*/
+section .container {
+  background: rgba(0, 0, 0, 0.9);
+  padding: 30px;
+}
+.section-title h2 {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0;
+  line-height: 1px;
+  margin: 0 0 20px 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #aaaaaa;
+  font-family: "Poppins", sans-serif;
+}
+.section-title h2::after {
+  content: "";
+  width: 120px;
+  height: 1px;
+  display: inline-block;
+  background: #4ceb95;
+  margin: 4px 10px;
+}
+.section-title p {
+  margin: 0;
+  margin: -15px 0 15px 0;
+  font-size: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+}
 .services .icon-box {
   text-align: center;
   background: rgba(204, 204, 204, 0.1);
@@ -126,7 +155,8 @@
 .services .icon-box:hover .icon::before {
   background: #35e888;
 }
-.services .icon-box:hover h4 a, .services .icon-box:hover p {
+.services .icon-box:hover h4 a,
+.services .icon-box:hover p {
   color: #fff;
 }
 
@@ -155,7 +185,8 @@
   transition: all 0.3s ease-in-out;
   border-radius: 4px;
 }
-.portfolio #portfolio-flters li:hover, .portfolio #portfolio-flters li.filter-active {
+.portfolio #portfolio-flters li:hover,
+.portfolio #portfolio-flters li.filter-active {
   background: #18d26e;
 }
 .portfolio #portfolio-flters li:last-child {
