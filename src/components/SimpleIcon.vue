@@ -1,17 +1,40 @@
 <template>
-  <div class="simpleicon" v-html="svg"></div>
+  <div v-if="icon" :style="{ color: `#${icon.hex}` }" class="simpleicon" v-html="icon.svg"></div>
+  <ph-question v-else :size="22" class="icon-item"></ph-question>
 </template>
 
 <script setup lang="ts">
-import useSimpleIcon from "@/composables/use-simple-icon"
+import SimpleIcons from "simple-icons"
+import { PhQuestion } from "phosphor-vue"
 
 interface Props {
-  icon: string
+  name: string
 }
 
 const props = defineProps<Props>()
 
-const { svg } = useSimpleIcon(props.icon)
+function titleToSlug(title: string): string {
+  return [
+    [/&apos;/g, "’"],
+    [/&amp;/g, 'and'],
+    [/\+/g, 'plus'],
+    [/\./g, 'dot'],
+    [/&/g, 'and'],
+    [/đ/g, 'd'],
+    [/ħ/g, 'h'],
+    [/ı/g, 'i'],
+    [/ĸ/g, 'k'],
+    [/ŀ/g, 'l'],
+    [/ł/g, 'l'],
+    [/ß/g, 'ss'],
+    [/ŧ/g, 't'],
+    [/^(.+)$/, ($0) => $0.normalize('NFD')],
+    [/[^a-z0-9]/g, '']
+  ].reduce((acc, [search, replace]) => acc.replace(search as string, replace as string), title.toLowerCase())
+}
+
+const iconSlug = titleToSlug(props.name)
+const icon = SimpleIcons.Get(iconSlug)
 </script>
 
 <style lang="scss">
