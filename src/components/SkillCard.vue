@@ -1,0 +1,59 @@
+<template>
+  <div class="skillcard col-lg-3 col-md-4">
+    <div class="skillcard__iconbox">
+      <simple-icon class="skillcard__iconbox__icon" :name="name"></simple-icon>
+      <h3>{{ name }}</h3>
+    </div>
+  </div>
+</template>
+
+<script setup lang="ts">
+import SimpleIcon from "@/components/SimpleIcon.vue"
+
+interface Props {
+  name: string
+}
+
+defineProps<Props>()
+</script>
+
+<style scoped lang="scss">
+.skillcard {
+  &__iconbox {
+    display: flex;
+    align-items: center;
+    padding: 1.2rem;
+    background: rgba(255, 255, 255, 0.08);
+    transition: ease-in-out 0.3s;
+    &:hover {
+      background: rgba(255, 255, 255, 0.12);
+    }
+    &__icon {
+      width: 2rem;
+      padding-right: 0.6rem;
+    }
+    h3 {
+      font-weight: 700;
+      margin: 0;
+      padding: 0;
+      line-height: 1;
+      font-size: 1rem;
+    }
+  }
+  @media (max-width: 768px) {
+    &:nth-child(n + 2) {
+      margin-top: 1.5rem;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 992px) {
+    &:nth-child(n + 4) {
+      margin-top: 1.5rem;
+    }
+  }
+  @media (min-width: 992px) {
+    &:nth-child(n + 5) {
+      margin-top: 1.5rem;
+    }
+  }
+}
+</style>

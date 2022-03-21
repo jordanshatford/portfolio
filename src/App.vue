@@ -22,16 +22,11 @@ body {
     content: "";
     position: fixed;
     background-color: #18181b;
-    // background: #040404 url("@/assets/img/bg.jpg") top right no-repeat;
-    // background-size: cover;
     left: 0;
     right: 0;
     top: 0;
     height: 100vh;
     z-index: -1;
-    // @media (min-width: 1024px) {
-    //   background-attachment: fixed;
-    // }
   }
 }
 

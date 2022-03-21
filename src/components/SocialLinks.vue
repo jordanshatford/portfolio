@@ -1,7 +1,7 @@
 <template>
   <div class="sociallinks">
     <a v-for="(social, index) in socials" :href="social.link" class="sociallinks__link" :key="index">
-      <simple-icon class="sociallinks__link__icon" :icon="social.icon"></simple-icon>
+      <simple-icon class="sociallinks__link__icon" :name="social.icon"></simple-icon>
     </a>
   </div>
 </template>
@@ -48,6 +48,7 @@ const socials = [
     &__icon {
       width: 1.2rem;
       height: auto;
+      color: $color-white !important;
     }
   }
   @media (max-width: 992px) {
