@@ -11,15 +11,15 @@ import SimpleIcon from "@/components/SimpleIcon.vue"
 
 const socials = [
   {
-    icon: "github",
+    icon: "Github",
     link: "#",
   },
   {
-    icon: "linkedin",
+    icon: "LinkedIn",
     link: "#",
   },
   {
-    icon: "stackoverflow",
+    icon: "StackOverflow",
     link: "#",
   },
 ]
