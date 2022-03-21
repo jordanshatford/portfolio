@@ -4,18 +4,17 @@
   </button>
 </template>
 
-<script setup lang="ts"></script>
-
 <style scoped lang="scss">
+@import '@/assets/scss/abstracts/variables';
 button {
-  background: #18d26e;
+  background: $color-primary;
   border: 0;
-  padding: 10px 30px;
-  color: #fff;
+  padding: 0.75rem 1.5rem;
+  color: $color-white;
   transition: 0.4s;
-  border-radius: 4px;
-}
-button:hover {
-  background: #15bb62;
+  border-radius: 0.25rem;
+  &:hover {
+    background: $color-primary-accent;
+  }
 }
 </style>

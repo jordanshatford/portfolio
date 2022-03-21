@@ -22,6 +22,6 @@ function emitUpdate(target: EventTarget | null) {
 @import "@/assets/scss/abstracts/mixins";
 input {
   @include base-input-style;
-  padding: 10px 15px;
+  padding: 0.75rem 1.25rem;
 }
 </style>

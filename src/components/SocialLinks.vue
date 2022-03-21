@@ -26,6 +26,7 @@ const socials = [
 </script>
 
 <style scoped lang="scss">
+@import "@/assets/scss/abstracts/variables";
 .sociallinks {
   margin-top: 40px;
   display: flex;
@@ -35,14 +36,14 @@ const socials = [
     justify-content: center;
     align-items: center;
     background: rgba(255, 255, 255, 0.1);
-    color: #fff;
+    color: $color-white;
     line-height: 1;
     margin-right: 8px;
     border-radius: 50%;
     width: 40px;
     height: 40px;
     &:hover {
-      background: #18d26e;
+      background: $color-primary;
     }
     &__icon {
       width: 1.2rem;

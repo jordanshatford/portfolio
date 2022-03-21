@@ -24,6 +24,7 @@ defineProps<Props>()
 </script>
 
 <style scoped lang="scss">
+@import '@/assets/scss/abstracts/variables';
 #header {
   transition: ease-in-out 0.3s;
   position: relative;
@@ -41,10 +42,9 @@ defineProps<Props>()
     padding: 0;
     line-height: 1;
     font-weight: 700;
-    font-family: "Poppins", sans-serif;
     a,
     a:hover {
-      color: #fff;
+      color: $color-white;
       line-height: 1;
       display: inline-block;
     }
@@ -54,8 +54,8 @@ defineProps<Props>()
     margin-top: 20px;
     color: rgba(255, 255, 255, 0.8);
     span {
-      color: #fff;
-      border-bottom: 2px solid #18d26e;
+      color: $color-white;
+      border-bottom: 2px solid $color-primary;
       padding-bottom: 6px;
     }
   }

@@ -22,6 +22,7 @@ const showMobileMenu = ref<boolean>(false)
 </script>
 
 <style scoped lang="scss">
+@import "@/assets/scss/abstracts/variables";
 .navbar {
   padding: 0;
   margin-top: 35px;
@@ -45,7 +46,6 @@ const showMobileMenu = ref<boolean>(false)
   align-items: center;
   justify-content: space-between;
   padding: 0;
-  font-family: "Poppins", sans-serif;
   font-size: 16px;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.7);
@@ -65,7 +65,7 @@ const showMobileMenu = ref<boolean>(false)
   height: 2px;
   bottom: -4px;
   left: 0;
-  background-color: #18d26e;
+  background-color: $color-primary;
   visibility: hidden;
   width: 0px;
   transition: all 0.3s ease-in-out 0s;
@@ -80,11 +80,11 @@ const showMobileMenu = ref<boolean>(false)
 .navbar .active,
 .navbar .active:focus,
 .navbar li:hover > a {
-  color: #fff;
+  color: $color-white;
 }
 
 .mobile-nav-toggle {
-  color: #fff;
+  color: $color-white;
   font-size: 28px;
   cursor: pointer;
   display: none;

@@ -23,6 +23,7 @@ function emitUpdate(target: EventTarget | null) {
 @import "@/assets/scss/abstracts/mixins";
 textarea {
   @include base-input-style;
-  padding: 12px 15px;
+  padding: 0.85rem 1.25rem;
+
 }
 </style>
