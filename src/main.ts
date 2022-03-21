@@ -14,5 +14,3 @@ app.component("v-textarea", BaseTextArea)
 app.component("v-button", BaseButton)
 app.use(router)
 app.mount("#app")
-
-import "bootstrap"
