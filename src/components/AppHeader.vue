@@ -24,7 +24,7 @@ defineProps<Props>()
 </script>
 
 <style scoped lang="scss">
-@import '@/assets/scss/abstracts/variables';
+@import "@/assets/scss/abstracts/variables";
 #header {
   transition: ease-in-out 0.3s;
   position: relative;

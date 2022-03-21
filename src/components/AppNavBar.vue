@@ -26,63 +26,59 @@ const showMobileMenu = ref<boolean>(false)
 .navbar {
   padding: 0;
   margin-top: 35px;
+  ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+    @media (max-width: 991px) {
+      display: none;
+    }
+  }
+  li {
+    position: relative;
+  }
+  li + li {
+    margin-left: 30px;
+  }
+  a,
+  a:focus {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.7);
+    white-space: nowrap;
+    transition: 0.3s;
+  }
+  a:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: $color-primary;
+    visibility: hidden;
+    width: 0px;
+    transition: all 0.3s ease-in-out 0s;
+  }
+  a:hover:before,
+  li:hover > a:before,
+  .active:before {
+    visibility: visible;
+    width: 25px;
+  }
+  a:hover,
+  .active,
+  .active:focus,
+  li:hover > a {
+    color: $color-white;
+  }
 }
-.navbar ul {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  list-style: none;
-  align-items: center;
-}
-.navbar li {
-  position: relative;
-}
-.navbar li + li {
-  margin-left: 30px;
-}
-.navbar a,
-.navbar a:focus {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0;
-  font-size: 16px;
-  font-weight: 400;
-  color: rgba(255, 255, 255, 0.7);
-  white-space: nowrap;
-  transition: 0.3s;
-}
-.navbar a i,
-.navbar a:focus i {
-  font-size: 12px;
-  line-height: 0;
-  margin-left: 5px;
-}
-.navbar a:before {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: -4px;
-  left: 0;
-  background-color: $color-primary;
-  visibility: hidden;
-  width: 0px;
-  transition: all 0.3s ease-in-out 0s;
-}
-.navbar a:hover:before,
-.navbar li:hover > a:before,
-.navbar .active:before {
-  visibility: visible;
-  width: 25px;
-}
-.navbar a:hover,
-.navbar .active,
-.navbar .active:focus,
-.navbar li:hover > a {
-  color: $color-white;
-}
-
 .mobile-nav-toggle {
   color: $color-white;
   font-size: 28px;
@@ -93,17 +89,11 @@ const showMobileMenu = ref<boolean>(false)
   position: fixed;
   right: 15px;
   top: 15px;
-}
-
-@media (max-width: 991px) {
-  .mobile-nav-toggle {
+  @media (max-width: 991px) {
     display: block;
   }
-
-  .navbar ul {
-    display: none;
-  }
 }
+
 .navbar-mobile {
   position: fixed;
   overflow: hidden;
@@ -115,33 +105,33 @@ const showMobileMenu = ref<boolean>(false)
   transition: 0.3s;
   z-index: 999;
   margin-top: 0;
-}
-.navbar-mobile .mobile-nav-toggle {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-}
-.navbar-mobile ul {
-  display: block;
-  position: absolute;
-  top: 55px;
-  right: 15px;
-  bottom: 45px;
-  left: 15px;
-  padding: 10px 0;
-  overflow-y: auto;
-  transition: 0.3s;
-  border: 2px solid rgba(255, 255, 255, 0.2);
-}
-.navbar-mobile li {
-  padding: 12px 20px;
-}
-.navbar-mobile li + li {
-  margin: 0;
-}
-.navbar-mobile a,
-.navbar-mobile a:focus {
-  font-size: 16px;
-  position: relative;
+  .mobile-nav-toggle {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+  ul {
+    display: block;
+    position: absolute;
+    top: 55px;
+    right: 15px;
+    bottom: 45px;
+    left: 15px;
+    padding: 10px 0;
+    overflow-y: auto;
+    transition: 0.3s;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+  }
+  li {
+    padding: 12px 20px;
+  }
+  li + li {
+    margin: 0;
+  }
+  a,
+  a:focus {
+    font-size: 16px;
+    position: relative;
+  }
 }
 </style>

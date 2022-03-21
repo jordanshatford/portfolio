@@ -5,7 +5,7 @@
 </template>
 
 <style scoped lang="scss">
-@import '@/assets/scss/abstracts/variables';
+@import "@/assets/scss/abstracts/variables";
 button {
   background: $color-primary;
   border: 0;

@@ -24,6 +24,5 @@ function emitUpdate(target: EventTarget | null) {
 textarea {
   @include base-input-style;
   padding: 0.85rem 1.25rem;
-
 }
 </style>
