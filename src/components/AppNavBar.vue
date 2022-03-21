@@ -7,15 +7,21 @@
         }}</router-link>
       </li>
     </ul>
-    <app-hamburger class="mobile-nav-toggle" v-model="showMobileMenu"></app-hamburger>
+    <component
+      class="mobile-nav-toggle"
+      :is="showMobileMenu ? PhX : PhList"
+      @click="showMobileMenu = !showMobileMenu"
+      :size="28"
+      weight="bold"
+    ></component>
   </nav>
 </template>
 
 <script setup lang="ts">
 import { ref } from "vue"
 import { useRoute } from "vue-router"
+import { PhList, PhX } from "phosphor-vue"
 import { routes } from "@/router"
-import AppHamburger from "@/components/AppHamburger.vue"
 
 const route = useRoute()
 const showMobileMenu = ref<boolean>(false)
