@@ -64,9 +64,8 @@
 
 <script setup lang="ts">
 import { PhCaretRight } from "phosphor-vue"
-import useUser from "@/composables/use-user"
+import { user } from "@/utils/user"
 import SkillCard from "@/components/SkillCard.vue"
-const user = useUser()
 </script>
 
 <style scoped lang="scss">

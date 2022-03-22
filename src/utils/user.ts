@@ -28,7 +28,7 @@ function ageFromDate(date: Date) {
   return age
 }
 
-const user: User = {
+export const user: User = {
   firstName: "Jordan",
   lastName: "Shatford",
   profilePicUrl: "https://avatars.githubusercontent.com/u/37837288?v=4",
@@ -86,8 +86,4 @@ const user: User = {
   ],
 }
 
-export function useUser() {
-  return user
-}
-
-export default useUser
+export default user
