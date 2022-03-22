@@ -26,29 +26,27 @@ const emits = defineEmits<{
 </script>
 
 <style scoped lang="scss">
+@import "@/assets/scss/abstracts/variables";
+
 .projectfilters {
   padding: 0;
-  margin: 0 auto 15px auto;
   list-style: none;
   text-align: center;
-  border-radius: 50px;
-  padding: 2px 15px;
   &__filter {
     cursor: pointer;
     display: inline-block;
-    padding: 8px 16px 10px 16px;
-    font-size: 14px;
+    padding: 0.5rem 0.8rem 0.6rem 0.8rem;
+    font-size: 0.9rem;
     font-weight: 600;
     line-height: 1;
     text-transform: uppercase;
-    color: #fff;
-    background: rgba(255, 255, 255, 0.1);
-    margin: 0 3px 10px 3px;
-    transition: all 0.3s ease-in-out;
-    border-radius: 4px;
+    color: $color-white;
+    background: $color-dark-accent;
+    margin: 0 0.3rem 0.5rem 0.3rem;
+    border-radius: 0.2rem;
     &:hover,
     &--active {
-      background: #18d26e;
+      background: $color-primary;
     }
     &:last-child {
       margin-right: 0;

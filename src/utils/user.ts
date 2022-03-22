@@ -73,6 +73,7 @@ export const user: User = {
       values: [
         "Prettier",
         "ESLint",
+        "pnpm",
         "TailwindCSS",
         "Bootstrap",
         "Sentry",

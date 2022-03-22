@@ -3,15 +3,28 @@
     <div class="projectcard__container">
       <div class="projectcard__icon"><ph-app-window :size="32"></ph-app-window></div>
       <h4 class="projectcard__title">
-        <a href="">{{ repository.name }}</a>
+        <a :href="repository.homepageUrl">{{ repository.name }}</a>
       </h4>
-      <p>{{ repository.description }}</p>
+      <p class="projectcard__description">{{ repository.description }}</p>
+      <div class="projectcard__links">
+        <a :href="repository.url" class="projectcard__links__link" target="_blank">
+          <span>Code <ph-git-branch :size="24"></ph-git-branch></span>
+        </a>
+        <a
+          v-if="repository.homepageUrl"
+          :href="repository.homepageUrl"
+          class="projectcard__links__link"
+          target="_blank"
+        >
+          <span>View <ph-arrow-square-out :size="24"></ph-arrow-square-out></span>
+        </a>
+      </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { PhAppWindow } from "phosphor-vue"
+import { PhAppWindow, PhArrowSquareOut, PhGitBranch } from "phosphor-vue"
 import type { GithubRepository } from "@/utils/types"
 
 interface Props {
@@ -27,11 +40,8 @@ defineProps<Props>()
     width: 100%;
     text-align: center;
     background: rgba(204, 204, 204, 0.1);
-    padding: 80px 20px;
+    padding: 40px 20px;
     transition: all ease-in-out 0.3s;
-    &:hover {
-      background: rgba(255, 255, 255, 0.12);
-    }
   }
   &__icon {
     margin: 0 auto;
@@ -58,10 +68,35 @@ defineProps<Props>()
       color: #fff;
     }
   }
-  p {
-    line-height: 24px;
+  &__description {
     font-size: 14px;
-    margin-bottom: 0;
+  }
+  &__links {
+    display: flex;
+    justify-content: center;
+    &__link {
+      margin-right: 0.5rem;
+      border: 0.125rem solid #18d26e;
+      padding: 0.4rem 0.6rem 0.4rem 0.6rem;
+      border-radius: 0.25rem;
+      span {
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      svg {
+        margin-left: 0.2rem;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+      &:hover {
+        cursor: pointer;
+        border: 0.125rem solid #15bb62;
+        background: rgba(255, 255, 255, 0.12);
+      }
+    }
   }
   @media (max-width: 768px) {
     &:nth-child(n + 2) {
