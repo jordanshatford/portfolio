@@ -101,7 +101,6 @@ section .container {
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #aaaaaa;
-  font-family: "Poppins", sans-serif;
 }
 .section-title h2::after {
   content: "";
@@ -117,7 +116,6 @@ section .container {
   font-size: 36px;
   font-weight: 700;
   text-transform: uppercase;
-  font-family: "Poppins", sans-serif;
   color: #fff;
 }
 .contact .info-box {
