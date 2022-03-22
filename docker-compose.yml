@@ -6,6 +6,8 @@ services:
       context: .
     image: portfolio:latest
     restart: always
+    environment:
+      VITE_GITHUB_PERSONAL_ACCESS_TOKEN: ${VITE_GITHUB_PERSONAL_ACCESS_TOKEN}
     ports:
       - 3000:3000
       - 24678:24678
