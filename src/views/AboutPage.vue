@@ -18,11 +18,7 @@
               </li>
               <li>
                 <ph-caret-right :size="20" weight="bold"></ph-caret-right>
-                <strong>Website:</strong> <span>{{ user.websiteUrl }}</span>
-              </li>
-              <li>
-                <ph-caret-right :size="20" weight="bold"></ph-caret-right>
-                <strong>Phone:</strong> <span>{{ user.phoneNumber }}</span>
+                <strong>Email:</strong> <span>{{ user.primaryEmail }}</span>
               </li>
               <li>
                 <ph-caret-right :size="20" weight="bold"></ph-caret-right>
@@ -39,10 +35,6 @@
               <li>
                 <ph-caret-right :size="20" weight="bold"></ph-caret-right>
                 <strong>Degree:</strong> <span>{{ user.degree }}</span>
-              </li>
-              <li>
-                <ph-caret-right :size="20" weight="bold"></ph-caret-right>
-                <strong>Email:</strong> <span>{{ user.primaryEmail }}</span>
               </li>
               <li>
                 <ph-caret-right :size="20" weight="bold"></ph-caret-right>

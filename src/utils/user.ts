@@ -12,8 +12,6 @@ interface User {
   bio: string
   dateOfBirth: Date
   age: number
-  websiteUrl: string
-  phoneNumber: string
   location: string
   degree: string
   primaryEmail: string
@@ -37,8 +35,6 @@ export const user: User = {
   bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In laoreet quam id hendrerit consequat. Sed nec orci venenatis, mollis mauris et, fermentum lorem. In sit amet tellus est. Curabitur pretium neque sed sem lacinia ullamcorper. Maecenas eget metus sollicitudin.",
   dateOfBirth: new Date("1998-11-21T04:00:00.000Z"),
   age: ageFromDate(new Date("1998-11-21T04:00:00.000Z")),
-  websiteUrl: "example.com",
-  phoneNumber: "+1234567890",
   location: "Halifax, NS, Canada",
   degree: "Bachelor Comp Sci",
   primaryEmail: "jordanshatford@live.com",
