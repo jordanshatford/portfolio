@@ -33,7 +33,7 @@ const { data, isFetching } = useQuery<{ viewer: GithubUser }>({
 })
 
 const repositories = computed(() => {
-  return data?.value?.viewer?.repositories?.nodes?.filter((repo) => !repo.isPrivate)
+  return data?.value?.viewer?.repositories?.nodes
 })
 
 function getRelevantLangs(repo: GithubRepository) {

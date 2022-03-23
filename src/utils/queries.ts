@@ -1,7 +1,7 @@
 export const GetViewerReposQuery = `
   query GetViewerReposQuery {
     viewer {
-      repositories(first: 100, isFork: false) {
+      repositories(first: 100, isFork: false, privacy: PUBLIC) {
         nodes {
           name
           description
