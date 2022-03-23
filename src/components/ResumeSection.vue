@@ -1,0 +1,80 @@
+<template>
+  <div class="resume-section">
+    <h3 class="resume-section__title">{{ section.title }}</h3>
+    <div v-for="(item, index) in section.items" :key="index" class="resume-section__item">
+      <h4>{{ item.title }}</h4>
+      <h5 v-if="item.startDate">{{ item.startDate }} - {{ item?.endDate ?? "Present" }}</h5>
+      <p>{{ item.description }}</p>
+      <p v-if="item.longDescriptions?.length === 1">{{ item.longDescriptions[0] }}</p>
+      <div v-else>
+        <ul>
+          <li v-for="(description, index) in item.longDescriptions" :key="index">{{ description }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script setup lang="ts">
+import type { ResumeSection } from "@/utils/user"
+
+interface Props {
+  section: ResumeSection
+}
+
+defineProps<Props>()
+</script>
+
+<style scoped lang="scss">
+.resume-section {
+  &__title {
+    font-size: 26px;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  &__item {
+    padding: 0 0 20px 20px;
+    margin-top: -2px;
+    border-left: 2px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    h4 {
+      line-height: 18px;
+      font-size: 18px;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: #18d26e;
+      margin-bottom: 10px;
+    }
+    h5 {
+      font-size: 16px;
+      background: rgba(255, 255, 255, 0.15);
+      padding: 5px 15px;
+      display: inline-block;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    ul {
+      padding-left: 20px;
+      li {
+        padding-bottom: 10px;
+      }
+    }
+    &:last-child {
+      padding-bottom: 0;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      border-radius: 50px;
+      left: -9px;
+      top: 0;
+      background: #18d26e;
+      border: 2px solid #18d26e;
+    }
+  }
+}
+</style>

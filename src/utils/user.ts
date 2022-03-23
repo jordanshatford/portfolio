@@ -3,6 +3,24 @@ interface Attributes {
   values: string[]
 }
 
+interface ResumeSectionItem {
+  title: string
+  startDate: string
+  endDate?: string
+  description: string
+  longDescriptions: string[]
+}
+
+export interface ResumeSection {
+  title: string
+  items: ResumeSectionItem[]
+}
+
+interface Resume {
+  education: ResumeSection
+  professionalExperience: ResumeSection
+}
+
 interface User {
   firstName: string
   lastName: string
@@ -16,6 +34,7 @@ interface User {
   degree: string
   primaryEmail: string
   primaryLanguage: string
+  resume: Resume
   socialLinks: Record<string, string>
   attributes: Attributes[]
 }
@@ -24,6 +43,66 @@ function ageFromDate(date: Date) {
   const ageDiffMs = Date.now() - date.getTime()
   const age = Math.abs(new Date(ageDiffMs).getUTCFullYear() - 1970)
   return age
+}
+
+const resume: Resume = {
+  education: {
+    title: "Education",
+    items: [
+      {
+        title: "Master of Fine Arts and Graphic Design",
+        startDate: "2019",
+        description: "Rochester Institute of Technology, Rochester, NY",
+        longDescriptions: [
+          "Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatum qui ut dignissimos deleniti nerada porti sand markend",
+        ],
+      },
+      {
+        title: "Master of Fine Arts and Graphic Design",
+        startDate: "2017",
+        endDate: "2018",
+        description: "Rochester Institute of Technology, Rochester, NY",
+        longDescriptions: [
+          "Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatum qui ut dignissimos deleniti nerada porti sand markend",
+        ],
+      },
+    ],
+  },
+  professionalExperience: {
+    title: "Professional Experience",
+    items: [
+      {
+        title: "Senior graphic design specialist",
+        startDate: "2019",
+        description: "Experion, New York, NY",
+        longDescriptions: [
+          "Lead in the design, development, and implementation of the graphic, layout, and production communication materials",
+          "Lead in the design, development, and implementation of the graphic, layout, and production communication materials",
+          "Lead in the design, development, and implementation of the graphic, layout, and production communication materials",
+        ],
+      },
+      {
+        title: "Senior graphic design specialist",
+        startDate: "2019",
+        description: "Experion, New York, NY",
+        longDescriptions: [
+          "Lead in the design, development, and implementation of the graphic, layout, and production communication materials",
+          "Lead in the design, development, and implementation of the graphic, layout, and production communication materials",
+          "Lead in the design, development, and implementation of the graphic, layout, and production communication materials",
+        ],
+      },
+      {
+        title: "Senior graphic design specialist",
+        startDate: "2019",
+        description: "Experion, New York, NY",
+        longDescriptions: [
+          "Lead in the design, development, and implementation of the graphic, layout, and production communication materials",
+          "Lead in the design, development, and implementation of the graphic, layout, and production communication materials",
+          "Lead in the design, development, and implementation of the graphic, layout, and production communication materials",
+        ],
+      },
+    ],
+  },
 }
 
 export const user: User = {
@@ -39,6 +118,7 @@ export const user: User = {
   degree: "Bachelor Comp Sci",
   primaryEmail: "jordanshatford@live.com",
   primaryLanguage: "English",
+  resume: resume,
   socialLinks: {
     github: "https://github.com/jordanshatford",
     linkedin: "https://www.linkedin.com/in/jordan-shatford",
