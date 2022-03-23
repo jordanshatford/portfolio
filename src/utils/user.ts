@@ -3,10 +3,14 @@ interface Attributes {
   values: string[]
 }
 
+interface DateRange {
+  start: Date
+  end?: Date
+}
+
 interface ResumeSectionItem {
   title: string
-  startDate: string
-  endDate?: string
+  dateRanges: DateRange[]
   description: string
   longDescriptions: string[]
 }
@@ -51,7 +55,11 @@ const resume: Resume = {
     items: [
       {
         title: "Master of Fine Arts and Graphic Design",
-        startDate: "2019",
+        dateRanges: [
+          {
+            start: new Date("December 20, 2019"),
+          },
+        ],
         description: "Rochester Institute of Technology, Rochester, NY",
         longDescriptions: [
           "Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatum qui ut dignissimos deleniti nerada porti sand markend",
@@ -59,8 +67,15 @@ const resume: Resume = {
       },
       {
         title: "Master of Fine Arts and Graphic Design",
-        startDate: "2017",
-        endDate: "2018",
+        dateRanges: [
+          {
+            start: new Date("December 20, 2019"),
+            end: new Date("December 20, 2020"),
+          },
+          {
+            start: new Date("December 20, 2021"),
+          },
+        ],
         description: "Rochester Institute of Technology, Rochester, NY",
         longDescriptions: [
           "Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatum qui ut dignissimos deleniti nerada porti sand markend",
@@ -73,7 +88,11 @@ const resume: Resume = {
     items: [
       {
         title: "Senior graphic design specialist",
-        startDate: "2019",
+        dateRanges: [
+          {
+            start: new Date("December 20, 2019"),
+          },
+        ],
         description: "Experion, New York, NY",
         longDescriptions: [
           "Lead in the design, development, and implementation of the graphic, layout, and production communication materials",
@@ -83,7 +102,11 @@ const resume: Resume = {
       },
       {
         title: "Senior graphic design specialist",
-        startDate: "2019",
+        dateRanges: [
+          {
+            start: new Date("December 20, 2019"),
+          },
+        ],
         description: "Experion, New York, NY",
         longDescriptions: [
           "Lead in the design, development, and implementation of the graphic, layout, and production communication materials",
@@ -93,7 +116,11 @@ const resume: Resume = {
       },
       {
         title: "Senior graphic design specialist",
-        startDate: "2019",
+        dateRanges: [
+          {
+            start: new Date("December 20, 2019"),
+          },
+        ],
         description: "Experion, New York, NY",
         longDescriptions: [
           "Lead in the design, development, and implementation of the graphic, layout, and production communication materials",
