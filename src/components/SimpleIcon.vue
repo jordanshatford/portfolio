@@ -1,5 +1,5 @@
 <template>
-  <div v-if="icon" :style="{ color: `#${icon.hex}` }" class="simpleicon" v-html="icon.svg"></div>
+  <span v-if="icon" :style="{ color: `#${icon.hex}` }" class="simpleicon" v-html="icon.svg"></span>
   <ph-placeholder v-else :size="22" class="icon-item"></ph-placeholder>
 </template>
 

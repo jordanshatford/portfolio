@@ -45,7 +45,7 @@ export const user: User = {
   primaryLanguage: "English",
   socialLinks: {
     github: "https://github.com/jordanshatford",
-    linkedin: "www.linkedin.com/in/jordan-shatford",
+    linkedin: "https://www.linkedin.com/in/jordan-shatford",
   },
   attributes: [
     {
