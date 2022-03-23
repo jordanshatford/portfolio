@@ -5,7 +5,6 @@
         <v-input
           type="text"
           name="name"
-          class="form-control"
           id="name"
           placeholder="Your Name"
           v-model="form.name"
@@ -15,7 +14,6 @@
       <div class="col-md-6 form-group mt-3 mt-md-0">
         <v-input
           type="email"
-          class="form-control"
           name="email"
           id="email"
           placeholder="Your Email"
@@ -27,7 +25,6 @@
     <div class="form-group mt-3">
       <v-input
         type="text"
-        class="form-control"
         name="subject"
         id="subject"
         placeholder="Subject"
