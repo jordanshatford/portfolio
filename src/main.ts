@@ -8,6 +8,7 @@ import BaseContainer from "@/components/base/BaseContainer.vue"
 import BaseInput from "@/components/base/BaseInput.vue"
 import BaseTextArea from "@/components/base/BaseTextArea.vue"
 import BaseButton from "@/components/base/BaseButton.vue"
+import BaseBadge from "@/components/base/BaseBadge.vue"
 
 const githubGraphqlClient = createClient({
   url: config.GITHUB_GRAPHQL_API_ENDPOINT,
@@ -24,6 +25,7 @@ app.component("v-container", BaseContainer)
 app.component("v-input", BaseInput)
 app.component("v-textarea", BaseTextArea)
 app.component("v-button", BaseButton)
+app.component("v-badge", BaseBadge)
 app.use(router)
 app.use(githubGraphqlClient)
 app.mount("#app")

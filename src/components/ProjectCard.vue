@@ -6,6 +6,7 @@
         <a :href="repository.homepageUrl">{{ repository.name }}</a>
       </h4>
       <p class="projectcard__description">{{ repository.description }}</p>
+      <v-badge v-for="lang in repository.languages.edges" :key="lang.node.id">{{ lang.node.name }}</v-badge>
       <div class="projectcard__links">
         <a :href="repository.url" class="projectcard__links__link" target="_blank">
           <span>Code <ph-git-branch :size="24"></ph-git-branch></span>
