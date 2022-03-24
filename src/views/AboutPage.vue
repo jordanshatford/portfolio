@@ -12,34 +12,16 @@
         <div class="row">
           <div class="col-lg-6">
             <ul>
-              <li>
-                <ph-caret-right :size="20" weight="bold"></ph-caret-right>
-                <strong>Birthday:</strong> <span>{{ user.dateOfBirth.toDateString().substring(4) }}</span>
-              </li>
-              <li>
-                <ph-caret-right :size="20" weight="bold"></ph-caret-right>
-                <strong>Email:</strong> <span>{{ user.primaryEmail }}</span>
-              </li>
-              <li>
-                <ph-caret-right :size="20" weight="bold"></ph-caret-right>
-                <strong>Location:</strong> <span>{{ user.location }}</span>
-              </li>
+              <about-list-item title="Birthday" :value="user.dateOfBirth.toDateString().substring(4)"></about-list-item>
+              <about-list-item title="Email" :value="user.primaryEmail"></about-list-item>
+              <about-list-item title="Location" :value="user.location"></about-list-item>
             </ul>
           </div>
           <div class="col-lg-6">
             <ul>
-              <li>
-                <ph-caret-right :size="20" weight="bold"></ph-caret-right>
-                <strong>Age:</strong> <span>{{ user.age }}</span>
-              </li>
-              <li>
-                <ph-caret-right :size="20" weight="bold"></ph-caret-right>
-                <strong>Degree:</strong> <span>{{ user.degree }}</span>
-              </li>
-              <li>
-                <ph-caret-right :size="20" weight="bold"></ph-caret-right>
-                <strong>Language:</strong> <span>{{ user.primaryLanguage }}</span>
-              </li>
+              <about-list-item title="Age" :value="user.age"></about-list-item>
+              <about-list-item title="Degree" :value="user.degree"></about-list-item>
+              <about-list-item title="Language" :value="user.primaryLanguage"></about-list-item>
             </ul>
           </div>
         </div>
@@ -55,8 +37,8 @@
 </template>
 
 <script setup lang="ts">
-import { PhCaretRight } from "phosphor-vue"
 import { user } from "@/utils/user"
+import AboutListItem from "@/components/AboutListItem.vue"
 import SkillCard from "@/components/SkillCard.vue"
 </script>
 
@@ -72,18 +54,6 @@ import SkillCard from "@/components/SkillCard.vue"
     ul {
       list-style: none;
       padding: 0;
-      li {
-        margin-bottom: 1.2rem;
-        display: flex;
-        align-items: center;
-      }
-      strong {
-        margin-right: 0.8rem;
-      }
-      svg {
-        margin-right: 0.3rem;
-        color: $color-primary;
-      }
     }
     p:last-child {
       margin-bottom: 0;

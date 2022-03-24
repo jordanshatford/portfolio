@@ -27,7 +27,7 @@ body {
     z-index: -1;
   }
   a {
-    text-decoration:  none;
+    text-decoration: none;
   }
 }
 
