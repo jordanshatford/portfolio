@@ -38,6 +38,7 @@ import { user } from "@/utils/user"
 </script>
 
 <style scoped lang="scss">
+@import "@/assets/scss/abstracts/variables";
 .contactpage {
   &__col {
     @media (max-width: 768px) {
@@ -52,7 +53,7 @@ import { user } from "@/utils/user"
       background: rgba(255, 255, 255, 0.08);
       svg {
         font-size: 24px;
-        color: #18d26e;
+        color: $color-primary;
         border-radius: 50%;
         padding: 14px;
         float: left;
@@ -85,7 +86,7 @@ import { user } from "@/utils/user"
       color: #fff !important;
       transition: 0.3s;
       &:hover {
-        color: #18d26e !important;
+        color: $color-primary !important;
       }
     }
   }

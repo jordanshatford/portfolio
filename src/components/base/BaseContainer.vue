@@ -18,6 +18,7 @@ defineProps<Props>()
 </script>
 
 <style scoped lang="scss">
+@import "@/assets/scss/abstracts/variables";
 .container {
   background: rgba(0, 0, 0, 0.9);
   padding: 30px;
@@ -35,7 +36,7 @@ defineProps<Props>()
       width: 120px;
       height: 1px;
       display: inline-block;
-      background: #4ceb95;
+      background: $color-primary-accent;
       margin: 4px 10px;
     }
   }
@@ -45,7 +46,7 @@ defineProps<Props>()
     font-size: 36px;
     font-weight: 700;
     text-transform: uppercase;
-    color: #fff;
+    color: $color-white;
   }
 }
 </style>

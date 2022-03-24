@@ -1,6 +1,6 @@
 <template>
   <app-header></app-header>
-  <section class="section-show">
+  <section class="app-section">
     <router-view></router-view>
   </section>
 </template>
@@ -10,6 +10,7 @@ import AppHeader from "@/components/AppHeader.vue"
 </script>
 
 <style lang="scss">
+@import "@/assets/scss/abstracts/variables";
 body {
   background-color: #040404;
   color: #fff;
@@ -25,37 +26,21 @@ body {
     height: 100vh;
     z-index: -1;
   }
-}
-
-a {
-  color: #18d26e;
-  text-decoration: none;
-  &:hover {
-    color: #35e888;
-    text-decoration: none;
+  a {
+    text-decoration:  none;
   }
 }
 
-section {
+.app-section {
   overflow: hidden;
   position: absolute;
   width: 100%;
-  top: 140px;
-  bottom: 100%;
-  opacity: 0;
-  transition: ease-in-out 0.4s;
   z-index: 2;
-}
-section.section-show {
   top: 100px;
   bottom: auto;
-  opacity: 1;
   padding-bottom: 45px;
 }
 @media (max-width: 768px) {
-  section {
-    top: 120px;
-  }
   section.section-show {
     top: 80px;
   }

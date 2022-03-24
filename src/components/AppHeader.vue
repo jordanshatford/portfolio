@@ -32,6 +32,7 @@ import { RouteNameConstants } from "@/router"
       color: $color-white;
       line-height: 1;
       display: inline-block;
+      text-decoration: none;
     }
   }
   &.appheader {

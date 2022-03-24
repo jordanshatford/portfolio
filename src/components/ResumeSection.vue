@@ -28,13 +28,14 @@ defineProps<Props>()
 </script>
 
 <style scoped lang="scss">
+@import "@/assets/scss/abstracts/variables";
 .resume-section {
   &__title {
     font-size: 26px;
     font-weight: 700;
     margin-top: 20px;
     margin-bottom: 20px;
-    color: #fff;
+    color: $color-white;
   }
   &__item {
     padding: 0 0 20px 20px;
@@ -46,7 +47,7 @@ defineProps<Props>()
       font-size: 18px;
       font-weight: 600;
       text-transform: uppercase;
-      color: #18d26e;
+      color: $color-primary;
       margin-bottom: 10px;
     }
     h5 {
@@ -75,8 +76,8 @@ defineProps<Props>()
       border-radius: 50px;
       left: -9px;
       top: 0;
-      background: #18d26e;
-      border: 2px solid #18d26e;
+      background: $color-primary;
+      border: 2px solid $color-primary;
     }
   }
 }

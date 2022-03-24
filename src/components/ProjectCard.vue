@@ -48,7 +48,7 @@ defineProps<Props>()
     margin: 0 auto;
     width: 64px;
     height: 64px;
-    background: #18d26e;
+    background: $color-primary;
     border-radius: 5px;
     transition: all 0.3s ease-out 0s;
     display: flex;
@@ -57,7 +57,7 @@ defineProps<Props>()
     margin-bottom: 20px;
     transform-style: preserve-3d;
     i {
-      color: #fff;
+      color: $color-white;
       font-size: 28px;
     }
   }
@@ -66,7 +66,7 @@ defineProps<Props>()
     margin-bottom: 15px;
     font-size: 24px;
     a {
-      color: #fff;
+      color: $color-white;
     }
   }
   &__description {
@@ -77,7 +77,7 @@ defineProps<Props>()
     justify-content: center;
     &__link {
       margin-right: 0.5rem;
-      border: 0.125rem solid #18d26e;
+      border: 0.125rem solid $color-primary;
       padding: 0.4rem 0.6rem 0.4rem 0.6rem;
       border-radius: 0.25rem;
       span {
@@ -94,7 +94,7 @@ defineProps<Props>()
       }
       &:hover {
         cursor: pointer;
-        border: 0.125rem solid #15bb62;
+        border: 0.125rem solid $color-primary-accent;
         background: rgba(255, 255, 255, 0.12);
       }
     }
