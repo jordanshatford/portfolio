@@ -5,7 +5,6 @@ import PortfolioPage from "@/views/PortfolioPage.vue"
 import ContactPage from "@/views/ContactPage.vue"
 
 export enum RouteNameConstants {
-  LANDING = "landing",
   ABOUT = "about",
   RESUME = "resume",
   PORTFOLIO = "portfolio",
@@ -15,14 +14,6 @@ export enum RouteNameConstants {
 export const routes: Array<RouteRecordRaw> = [
   {
     path: "/",
-    name: RouteNameConstants.LANDING,
-    component: { template: "<div></div>" },
-    meta: {
-      title: "Home",
-    },
-  },
-  {
-    path: "/about",
     name: RouteNameConstants.ABOUT,
     component: AboutPage,
     meta: {
@@ -61,7 +52,7 @@ const router = createRouter({
     ...routes,
     {
       path: "/:pathMatch(.*)*",
-      redirect: { name: RouteNameConstants.LANDING },
+      redirect: { name: RouteNameConstants.ABOUT },
     },
   ],
 })

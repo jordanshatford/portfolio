@@ -1,15 +1,12 @@
 <template>
-  <app-header :top="route.name !== RouteNameConstants.LANDING"></app-header>
-  <section v-if="route.name !== RouteNameConstants.LANDING" class="section-show">
+  <app-header></app-header>
+  <section class="section-show">
     <router-view></router-view>
   </section>
 </template>
 
 <script setup lang="ts">
-import { RouteNameConstants } from "@/router"
-import { useRoute } from "vue-router"
 import AppHeader from "@/components/AppHeader.vue"
-const route = useRoute()
 </script>
 
 <style lang="scss">
