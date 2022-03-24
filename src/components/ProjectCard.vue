@@ -35,6 +35,7 @@ defineProps<Props>()
 </script>
 
 <style scoped lang="scss">
+@import "@/assets/scss/abstracts/variables";
 .projectcard {
   &__container {
     width: 100%;
@@ -98,17 +99,17 @@ defineProps<Props>()
       }
     }
   }
-  @media (max-width: 768px) {
+  @media (max-width: $breakpoint-md) {
     &:nth-child(n + 2) {
       margin-top: 1.5rem;
     }
   }
-  @media (min-width: 768px) and (max-width: 992px) {
+  @media (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {
     &:nth-child(n + 3) {
       margin-top: 1.5rem;
     }
   }
-  @media (min-width: 992px) {
+  @media (min-width: $breakpoint-lg) {
     &:nth-child(n + 4) {
       margin-top: 1.5rem;
     }

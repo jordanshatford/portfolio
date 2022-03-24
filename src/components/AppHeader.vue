@@ -52,7 +52,7 @@ import { RouteNameConstants } from "@/router"
     .navbar {
       margin: 0;
     }
-    @media (max-width: 768px) {
+    @media (max-width: $breakpoint-md) {
       height: 60px;
       h1 {
         font-size: 26px;

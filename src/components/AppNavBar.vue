@@ -38,7 +38,7 @@ const showMobileMenu = ref<boolean>(false)
     display: flex;
     list-style: none;
     align-items: center;
-    @media (max-width: 991px) {
+    @media (max-width: $breakpoint-lg) {
       display: none;
     }
   }

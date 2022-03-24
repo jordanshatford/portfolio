@@ -18,6 +18,7 @@ defineProps<Props>()
 </script>
 
 <style scoped lang="scss">
+@import "@/assets/scss/abstracts/variables";
 .skillcard {
   &__iconbox {
     display: flex;
@@ -40,17 +41,17 @@ defineProps<Props>()
       font-size: 1rem;
     }
   }
-  @media (max-width: 768px) {
+  @media (max-width: $breakpoint-md) {
     &:nth-child(n + 2) {
       margin-top: 1.5rem;
     }
   }
-  @media (min-width: 768px) and (max-width: 992px) {
+  @media (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {
     &:nth-child(n + 4) {
       margin-top: 1.5rem;
     }
   }
-  @media (min-width: 992px) {
+  @media (min-width: $breakpoint-lg) {
     &:nth-child(n + 5) {
       margin-top: 1.5rem;
     }

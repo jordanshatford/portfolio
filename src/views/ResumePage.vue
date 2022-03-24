@@ -1,5 +1,5 @@
 <template>
-  <v-container class="resume" title="Resume" subtitle="My Experience">
+  <v-container class="resume-page" title="Resume" subtitle="My Experience">
     <div class="row">
       <div class="col-lg-6">
         <resume-section :section="user.resume.professionalExperience"></resume-section>
