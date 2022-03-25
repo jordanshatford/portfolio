@@ -14,12 +14,23 @@
     <div class="form-group mt-3">
       <v-textarea name="message" :rows="5" placeholder="Message" required v-model="form.message"></v-textarea>
     </div>
-    <div class="mt-3 text-center"><v-button type="submit">Send Message</v-button></div>
+    <div class="contactform__alert">
+      <div v-if="isSending" class="contactform__alert--loading">Sending...</div>
+      <div v-if="hasErrorSending" class="contactform__alert--error">Error Sending Message</div>
+      <div v-if="hasSuccessSending" class="contactform__alert--success">Your message has been sent</div>
+    </div>
+    <div class="mt-3 text-center"><v-button :disabled="isSending" type="submit">Send Message</v-button></div>
   </form>
 </template>
 
 <script setup lang="ts">
-import { reactive } from "vue"
+import { reactive, ref } from "vue"
+import emailjs from "@emailjs/browser"
+import { config } from "@/utils/config"
+
+const isSending = ref<boolean>(false)
+const hasErrorSending = ref<boolean>(false)
+const hasSuccessSending = ref<boolean>(false)
 
 const form = reactive({
   name: "",
@@ -29,7 +40,27 @@ const form = reactive({
 })
 
 function onSubmit() {
-  console.log("Email sending functionality not implemented. ", { form })
+  isSending.value = true
+  emailjs.send(config.EMAILJS_SERVICE_ID, config.EMAILJS_TEMPLATE_ID, form, config.EMAILJS_USER_ID).then(
+    () => {
+      // Send successful
+      isSending.value = false
+      hasSuccessSending.value = true
+      form.name = ""
+      form.email = ""
+      form.subject = ""
+      form.message = ""
+    },
+    () => {
+      // Send failed
+      isSending.value = false
+      hasErrorSending.value = true
+    }
+  )
+  setTimeout(() => {
+    hasErrorSending.value = false
+    hasSuccessSending.value = false
+  }, 3000)
 }
 </script>
 
@@ -38,5 +69,22 @@ function onSubmit() {
 .contactform {
   padding: 30px;
   background: $color-grey;
+  &__alert {
+    margin-top: 1rem;
+    text-align: left;
+    font-weight: 600;
+    &--error {
+      padding: 15px;
+      background: $color-error;
+    }
+    &--success {
+      padding: 15px;
+      background: $color-success;
+    }
+    &--loading {
+      padding: 15px;
+      background: $color-grey-lightest;
+    }
+  }
 }
 </style>

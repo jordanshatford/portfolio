@@ -23,6 +23,10 @@ pnpm install
 # The Github Personal Access token for the project
 # https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
 VITE_GITHUB_PERSONAL_ACCESS_TOKEN=
+# EmailJS related information
+VITE_EMAILJS_TEMPLATE_ID=
+VITE_EMAILJS_USER_ID=
+VITE_EMAILJS_SERVICE_ID=
 ```
 This can be done by filling out and copying the `example.env` file to a `.env` file.
 

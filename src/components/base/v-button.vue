@@ -16,5 +16,9 @@
   &:hover {
     background: $color-primary-accent;
   }
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.4;
+  }
 }
 </style>
