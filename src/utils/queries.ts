@@ -7,6 +7,7 @@ export const GetViewerReposQuery = `
           description
           url
           homepageUrl
+          openGraphImageUrl
           isPrivate
           createdAt
           repositoryTopics(first: 5) {

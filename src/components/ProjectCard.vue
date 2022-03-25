@@ -1,7 +1,10 @@
 <template>
   <div class="projectcard col-lg-4 col-md-6 d-flex align-items-stretch">
     <div class="projectcard__container">
-      <div class="projectcard__icon"><ph-app-window :size="32"></ph-app-window></div>
+      <a v-if="!imageIsAvatar" :href="repository.homepageUrl" target="_blank">
+        <img :src="repository.openGraphImageUrl" class="projectcard__image" alt="Project Image" />
+      </a>
+      <div v-else class="projectcard__icon"><ph-app-window :size="32"></ph-app-window></div>
       <h4 class="projectcard__title">
         <a :href="repository.homepageUrl">{{ repository.name }}</a>
       </h4>
@@ -25,6 +28,7 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from "vue"
 import { PhAppWindow, PhArrowSquareOut, PhGitBranch } from "phosphor-vue"
 import type { GithubRepository } from "@/utils/types"
 
@@ -32,7 +36,11 @@ interface Props {
   repository: GithubRepository
 }
 
-defineProps<Props>()
+const props = defineProps<Props>()
+
+const imageIsAvatar = computed(() => {
+  return props.repository.openGraphImageUrl.includes("avatars.githubusercontent.com")
+})
 </script>
 
 <style scoped lang="scss">
@@ -44,6 +52,14 @@ defineProps<Props>()
     background: $color-grey;
     padding: 40px 20px;
     transition: all ease-in-out 0.3s;
+  }
+  &__image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    border: 0.125rem solid $color-primary;
+    margin: 0 auto;
+    margin-bottom: 20px;
   }
   &__icon {
     margin: 0 auto;

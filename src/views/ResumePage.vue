@@ -23,13 +23,13 @@ import { user } from "@/utils/user"
 </script>
 
 <style scoped lang="scss">
-@import '@/assets/scss/abstracts/variables';
+@import "@/assets/scss/abstracts/variables";
 .resume-page {
   &__download {
     a {
       color: $color-primary;
       &:hover {
-        color: $color-primary-accent
+        color: $color-primary-accent;
       }
     }
   }

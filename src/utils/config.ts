@@ -8,7 +8,7 @@ export const config = {
     YEAR: new Date().getFullYear(),
     CREATOR: "Jordan Shatford",
     REPO: "https://github.com/jordanshatford/portfolio",
-  }
+  },
 }
 
 export default config

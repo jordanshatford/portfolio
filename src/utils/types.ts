@@ -24,6 +24,7 @@ export interface GithubRepository {
   createdAt: string
   description?: string
   homepageUrl: string
+  openGraphImageUrl: string
   isPrivate: boolean
   languages: GithubLanguages
   name: string

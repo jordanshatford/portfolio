@@ -4,14 +4,16 @@
       <div class="app-footer__copyright">© {{ config.COPYRIGHT.YEAR }} {{ config.COPYRIGHT.CREATOR }}</div>
     </div>
     <div class="app-footer__icon-container">
-      <a :href="config.COPYRIGHT.REPO" target="_blank"><simple-icon class="app-footer__icon-container__icon" name="github"></simple-icon></a>
+      <a :href="config.COPYRIGHT.REPO" target="_blank"
+        ><simple-icon class="app-footer__icon-container__icon" name="github"></simple-icon
+      ></a>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import SimpleIcon from '@/components/SimpleIcon.vue';
-import { config } from "@/utils/config";
+import SimpleIcon from "@/components/SimpleIcon.vue"
+import { config } from "@/utils/config"
 </script>
 
 <style scoped lang="scss">
@@ -21,7 +23,7 @@ import { config } from "@/utils/config";
   justify-content: space-between;
   align-items: center;
   padding: 20px 30px 20px 30px;
-  color:$color-grey-lightest;
+  color: $color-grey-lightest;
   width: 100%;
   background-color: $color-grey-dark;
   height: 80px;
