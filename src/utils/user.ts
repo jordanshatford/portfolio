@@ -39,6 +39,7 @@ interface User {
   primaryEmail: string
   primaryLanguage: string
   resume: Resume
+  resumeLink: string
   socialLinks: Record<string, string>
   attributes: Attributes[]
 }
@@ -62,7 +63,7 @@ const resume: Resume = {
           },
         ],
         description: "Dalhousie University, Halifax, NS",
-        longDescriptions: ["GPA: 3.88/4.3", "Participated in the Cooperative program"],
+        longDescriptions: ["GPA: 3.88/4.3", "Participated in the Cooperative program which consisted of three co-op placement terms."],
       },
     ],
   },
@@ -116,6 +117,7 @@ export const user: User = {
   primaryEmail: "jordanshatford@live.com",
   primaryLanguage: "English",
   resume: resume,
+  resumeLink: "/files/resume.pdf",
   socialLinks: {
     github: "https://github.com/jordanshatford",
     linkedin: "https://www.linkedin.com/in/jordan-shatford",
