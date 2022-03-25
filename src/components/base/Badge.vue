@@ -1,15 +1,15 @@
 <template>
-<span class="basetag"><slot></slot></span>
+<span class="v-badge"><slot></slot></span>
 </template>
 
 <style scoped lang="scss">
-.basetag {
-  font-size: 12px;
+.v-badge {
+  font-size: 0.8rem;
   background: #252525;
-  padding: 5px 15px;
+  padding: 0.4rem 0.8rem;
   display: inline-block;
   font-weight: 600;
-  margin-bottom: 10px;
+  margin-bottom: 0.5rem;
   margin-right: 0.5rem;
 }
 </style>

@@ -4,11 +4,11 @@ import { createClient, defaultPlugins, type ClientPluginContext } from "villus"
 import router from "@/router"
 import App from "@/App.vue"
 import config from "@/utils/config"
-import BaseContainer from "@/components/base/BaseContainer.vue"
-import BaseInput from "@/components/base/BaseInput.vue"
-import BaseTextArea from "@/components/base/BaseTextArea.vue"
-import BaseButton from "@/components/base/BaseButton.vue"
-import BaseBadge from "@/components/base/BaseBadge.vue"
+import Container from "@/components/base/Container.vue"
+import Input from "@/components/base/Input.vue"
+import TextArea from "@/components/base/TextArea.vue"
+import Button from "@/components/base/Button.vue"
+import Badge from "@/components/base/Badge.vue"
 
 const githubGraphqlClient = createClient({
   url: config.GITHUB_GRAPHQL_API_ENDPOINT,
@@ -21,11 +21,11 @@ const githubGraphqlClient = createClient({
 })
 
 const app = createApp(App)
-app.component("v-container", BaseContainer)
-app.component("v-input", BaseInput)
-app.component("v-textarea", BaseTextArea)
-app.component("v-button", BaseButton)
-app.component("v-badge", BaseBadge)
+app.component("v-container", Container)
+app.component("v-input", Input)
+app.component("v-textarea", TextArea)
+app.component("v-button", Button)
+app.component("v-badge", Badge)
 app.use(router)
 app.use(githubGraphqlClient)
 app.mount("#app")

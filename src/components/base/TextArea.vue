@@ -1,5 +1,5 @@
 <template>
-  <textarea class="form-control" :value="modelValue" @input="emitUpdate($event.target)" :rows="rows"></textarea>
+  <textarea class="v-textarea form-control" :value="modelValue" @input="emitUpdate($event.target)" :rows="rows"></textarea>
 </template>
 
 <script setup lang="ts">
@@ -21,7 +21,7 @@ function emitUpdate(target: EventTarget | null) {
 
 <style scoped lang="scss">
 @import "@/assets/scss/abstracts/mixins";
-textarea {
+.v-textarea {
   @include base-input-style;
   padding: 0.85rem 1.25rem;
 }

@@ -1,8 +1,8 @@
 <template>
-  <div class="container">
+  <div class="v-container container">
     <div>
-      <h2 class="container__title">{{ title }}</h2>
-      <p v-if="subtitle" class="container__subtitle">{{ subtitle }}</p>
+      <h2 class="v-container__title">{{ title }}</h2>
+      <p v-if="subtitle" class="v-container__subtitle">{{ subtitle }}</p>
     </div>
     <slot></slot>
   </div>
@@ -19,7 +19,7 @@ defineProps<Props>()
 
 <style scoped lang="scss">
 @import "@/assets/scss/abstracts/variables";
-.container {
+.v-container {
   background: rgba(0, 0, 0, 0.9);
   padding: 30px;
   &__title {

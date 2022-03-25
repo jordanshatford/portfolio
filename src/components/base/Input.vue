@@ -1,5 +1,5 @@
 <template>
-  <input class="form-control" :value="modelValue" @input="emitUpdate($event.target)" />
+  <input class="v-input form-control" :value="modelValue" @input="emitUpdate($event.target)" />
 </template>
 
 <script setup lang="ts">
@@ -20,7 +20,7 @@ function emitUpdate(target: EventTarget | null) {
 
 <style scoped lang="scss">
 @import "@/assets/scss/abstracts/mixins";
-input {
+.v-input {
   @include base-input-style;
   padding: 0.75rem 1.25rem;
 }
