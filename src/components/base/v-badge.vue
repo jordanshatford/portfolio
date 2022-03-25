@@ -1,5 +1,5 @@
 <template>
-<span class="v-badge"><slot></slot></span>
+  <span class="v-badge"><slot></slot></span>
 </template>
 
 <style scoped lang="scss">

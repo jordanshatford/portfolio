@@ -8,12 +8,12 @@
       </v-badge>
       <p>{{ item.description }}</p>
       <div class="resume-section__item__long-description">
-      <p v-if="item.longDescriptions?.length === 1">{{ item.longDescriptions[0] }}</p>
-      <div v-else>
-        <ul>
-          <li v-for="(description, index) in item.longDescriptions" :key="index">{{ description }}</li>
-        </ul>
-      </div>
+        <p v-if="item.longDescriptions?.length === 1">{{ item.longDescriptions[0] }}</p>
+        <div v-else>
+          <ul>
+            <li v-for="(description, index) in item.longDescriptions" :key="index">{{ description }}</li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>

@@ -1,5 +1,10 @@
 <template>
-  <textarea class="v-textarea form-control" :value="modelValue" @input="emitUpdate($event.target)" :rows="rows"></textarea>
+  <textarea
+    class="v-textarea form-control"
+    :value="modelValue"
+    @input="emitUpdate($event.target)"
+    :rows="rows"
+  ></textarea>
 </template>
 
 <script setup lang="ts">
