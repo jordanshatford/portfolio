@@ -4,7 +4,10 @@
     <div v-for="(item, index) in section.items" :key="index" class="resume-section__item">
       <h4>{{ item.title }}</h4>
       <v-badge v-for="(range, index) in item.dateRanges" :key="index">
-        {{ range.start.getFullYear() }} - {{ range?.end?.getFullYear() ?? "Present" }}
+        {{ range.start.toLocaleString("en-US", { month: "short" }) }}
+        {{ range.start.getFullYear() }} -
+        <span v-if="range.end">{{ range.end.toLocaleString("en-US", { month: "short" }) }}</span>
+        {{ range?.end?.getFullYear() ?? "Present" }}
       </v-badge>
       <p>{{ item.description }}</p>
       <div class="resume-section__item__long-description">

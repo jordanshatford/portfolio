@@ -54,32 +54,15 @@ const resume: Resume = {
     title: "Education",
     items: [
       {
-        title: "Master of Fine Arts and Graphic Design",
+        title: "Bachelor of Computer Science",
         dateRanges: [
           {
-            start: new Date("December 20, 2019"),
+            start: new Date("September 1, 2017"),
+            end: new Date("September 1, 2021"),
           },
         ],
-        description: "Rochester Institute of Technology, Rochester, NY",
-        longDescriptions: [
-          "Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatum qui ut dignissimos deleniti nerada porti sand markend",
-        ],
-      },
-      {
-        title: "Master of Fine Arts and Graphic Design",
-        dateRanges: [
-          {
-            start: new Date("December 20, 2019"),
-            end: new Date("December 20, 2020"),
-          },
-          {
-            start: new Date("December 20, 2021"),
-          },
-        ],
-        description: "Rochester Institute of Technology, Rochester, NY",
-        longDescriptions: [
-          "Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatum qui ut dignissimos deleniti nerada porti sand markend",
-        ],
+        description: "Dalhousie University, Halifax, NS",
+        longDescriptions: ["GPA: 3.88/4.3", "Participated in the Cooperative program"],
       },
     ],
   },
@@ -87,46 +70,33 @@ const resume: Resume = {
     title: "Professional Experience",
     items: [
       {
-        title: "Senior graphic design specialist",
+        title: "Software Developer",
         dateRanges: [
           {
-            start: new Date("December 20, 2019"),
+            start: new Date("September 1, 2021"),
           },
         ],
-        description: "Experion, New York, NY",
-        longDescriptions: [
-          "Lead in the design, development, and implementation of the graphic, layout, and production communication materials",
-          "Lead in the design, development, and implementation of the graphic, layout, and production communication materials",
-          "Lead in the design, development, and implementation of the graphic, layout, and production communication materials",
-        ],
+        description: "Nautel, Hackett's Cove, NS",
+        longDescriptions: [],
       },
       {
-        title: "Senior graphic design specialist",
+        title: "Software Developer Co-op",
         dateRanges: [
           {
-            start: new Date("December 20, 2019"),
+            start: new Date("May 1, 2019"),
+            end: new Date("August 1, 2019"),
           },
-        ],
-        description: "Experion, New York, NY",
-        longDescriptions: [
-          "Lead in the design, development, and implementation of the graphic, layout, and production communication materials",
-          "Lead in the design, development, and implementation of the graphic, layout, and production communication materials",
-          "Lead in the design, development, and implementation of the graphic, layout, and production communication materials",
-        ],
-      },
-      {
-        title: "Senior graphic design specialist",
-        dateRanges: [
           {
-            start: new Date("December 20, 2019"),
+            start: new Date("January 1, 2020"),
+            end: new Date("May 1, 2020"),
+          },
+          {
+            start: new Date("September 1, 2020"),
+            end: new Date("December 1, 2020"),
           },
         ],
-        description: "Experion, New York, NY",
-        longDescriptions: [
-          "Lead in the design, development, and implementation of the graphic, layout, and production communication materials",
-          "Lead in the design, development, and implementation of the graphic, layout, and production communication materials",
-          "Lead in the design, development, and implementation of the graphic, layout, and production communication materials",
-        ],
+        description: "Nautel, Hackett's Cove, NS",
+        longDescriptions: [],
       },
     ],
   },
