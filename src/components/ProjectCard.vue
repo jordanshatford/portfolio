@@ -72,10 +72,12 @@ defineProps<Props>()
   }
   &__description {
     font-size: 14px;
+    color: $color-grey-lightest;
   }
   &__links {
     display: flex;
     justify-content: center;
+    margin-top: 1rem;
     &__link {
       margin-right: 0.5rem;
       border: 0.125rem solid $color-primary;
