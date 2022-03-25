@@ -7,11 +7,13 @@
         {{ range.start.getFullYear() }} - {{ range?.end?.getFullYear() ?? "Present" }}
       </v-badge>
       <p>{{ item.description }}</p>
+      <div class="resume-section__item__long-description">
       <p v-if="item.longDescriptions?.length === 1">{{ item.longDescriptions[0] }}</p>
       <div v-else>
         <ul>
           <li v-for="(description, index) in item.longDescriptions" :key="index">{{ description }}</li>
         </ul>
+      </div>
       </div>
     </div>
   </div>
@@ -69,6 +71,9 @@ defineProps<Props>()
       top: 0;
       background: $color-primary;
       border: 2px solid $color-primary;
+    }
+    &__long-description {
+      color: $color-grey-lightest;
     }
   }
 }
