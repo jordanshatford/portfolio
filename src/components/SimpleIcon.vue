@@ -28,7 +28,7 @@ function titleToSlug(title: string): string {
     [/ł/g, "l"],
     [/ß/g, "ss"],
     [/ŧ/g, "t"],
-    [/^(.+)$/, ($0) => $0.normalize("NFD")],
+    [/^(.+)$/, ($0: string) => $0.normalize("NFD")],
     [/[^a-z0-9]/g, ""],
   ].reduce((acc, [search, replace]) => acc.replace(search as string, replace as string), title.toLowerCase())
 }
