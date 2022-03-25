@@ -5,7 +5,9 @@
         <img :src="user.profilePicUrl" class="img-fluid w-100" alt="profile picture" />
       </div>
       <div class="col-lg-8 pt-4 pt-lg-0 aboutpage__description">
-        <h3>{{ user.jobTitle }}</h3>
+        <h3>
+          {{ user.jobTitle }} <span>at {{ user.jobCompany }}</span>
+        </h3>
         <p class="fst-italic">
           {{ user.jobDescription }}
         </p>
@@ -50,6 +52,9 @@ import SkillCard from "@/components/SkillCard.vue"
       font-weight: 700;
       font-size: 2rem;
       color: $color-primary;
+      span {
+        color: $color-white;
+      }
     }
     ul {
       list-style: none;

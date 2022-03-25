@@ -30,6 +30,7 @@ interface User {
   lastName: string
   profilePicUrl: string
   jobTitle: string
+  jobCompany: string
   jobDescription: string
   bio: string
   dateOfBirth: Date
@@ -63,7 +64,10 @@ const resume: Resume = {
           },
         ],
         description: "Dalhousie University, Halifax, NS",
-        longDescriptions: ["GPA: 3.88/4.3", "Participated in the Cooperative program which consisted of three co-op placement terms."],
+        longDescriptions: [
+          "GPA: 3.88/4.3",
+          "Participated in the Cooperative program which consisted of three co-op placement terms.",
+        ],
       },
     ],
   },
@@ -108,7 +112,9 @@ export const user: User = {
   lastName: "Shatford",
   profilePicUrl: "https://avatars.githubusercontent.com/u/37837288?v=4",
   jobTitle: "Software Developer",
-  jobDescription: "This is a description of my current position.",
+  jobCompany: "Nautel",
+  jobDescription:
+    "Development on a full project utilizing Vue.js, Typescript, SCSS, and C++. Performing code reviews on others work. Refactoring code to reduce duplication, increase code quality and ensure easier maintainability.",
   bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In laoreet quam id hendrerit consequat. Sed nec orci venenatis, mollis mauris et, fermentum lorem. In sit amet tellus est. Curabitur pretium neque sed sem lacinia ullamcorper. Maecenas eget metus sollicitudin.",
   dateOfBirth: new Date("1998-11-21T04:00:00.000Z"),
   age: ageFromDate(new Date("1998-11-21T04:00:00.000Z")),
@@ -157,7 +163,7 @@ export const user: User = {
         "Heroku",
         "Codecov",
         "Atlassian",
-        "p5.js"
+        "p5.js",
       ],
     },
   ],
