@@ -3,10 +3,12 @@
   <section class="app-section">
     <router-view></router-view>
   </section>
+  <app-footer></app-footer>
 </template>
 
 <script setup lang="ts">
 import AppHeader from "@/components/AppHeader.vue"
+import AppFooter from "@/components/AppFooter.vue";
 </script>
 
 <style lang="scss">
@@ -31,15 +33,15 @@ body {
 }
 
 .app-section {
-  overflow: hidden;
-  position: absolute;
+  min-height: 100vh;
+  padding-top: 100px;
   width: 100%;
   z-index: 2;
   top: 100px;
   bottom: auto;
-  padding-bottom: 45px;
+  padding-bottom: 30px;
   @media (max-width: $breakpoint-md) {
-    top: 80px;
+    padding-top: 80px;
   }
 }
 </style>
