@@ -24,10 +24,10 @@ defineProps<Props>()
     display: flex;
     align-items: center;
     padding: 1.2rem;
-    background: rgba(255, 255, 255, 0.08);
+    background: $color-grey;
     transition: ease-in-out 0.3s;
     &:hover {
-      background: rgba(255, 255, 255, 0.12);
+      background: $color-grey-light;
     }
     &__icon {
       width: 2rem;

@@ -29,6 +29,7 @@ defineProps<Props>()
   }
   strong {
     margin-right: 0.8rem;
+    color: $color-grey-lightest;
   }
 }
 </style>

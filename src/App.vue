@@ -12,14 +12,13 @@ import AppHeader from "@/components/AppHeader.vue"
 <style lang="scss">
 @import "@/assets/scss/abstracts/variables";
 body {
-  background-color: #040404;
-  color: #fff;
+  color: $color-white;
   position: relative;
   background: transparent;
   &::before {
     content: "";
     position: fixed;
-    background-color: #18181b;
+    background-color: $color-grey;
     left: 0;
     right: 0;
     top: 0;
@@ -39,9 +38,7 @@ body {
   top: 100px;
   bottom: auto;
   padding-bottom: 45px;
-}
-@media (max-width: 768px) {
-  section.section-show {
+  @media (max-width: $breakpoint-md) {
     top: 80px;
   }
 }

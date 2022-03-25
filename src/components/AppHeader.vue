@@ -22,8 +22,9 @@ import { RouteNameConstants } from "@/router"
   z-index: 997;
   overflow-y: auto;
   h1 {
-    font-size: 48px;
     margin: 0;
+    margin-right: auto;
+    font-size: 30px;
     padding: 0;
     line-height: 1;
     font-weight: 700;
@@ -41,11 +42,7 @@ import { RouteNameConstants } from "@/router"
     left: 0;
     top: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0.9);
-    h1 {
-      margin-right: auto;
-      font-size: 30px;
-    }
+    background: $color-grey-dark;
     .container {
       display: flex;
       align-items: center;

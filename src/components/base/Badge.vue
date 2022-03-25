@@ -3,9 +3,10 @@
 </template>
 
 <style scoped lang="scss">
+@import "@/assets/scss/abstracts/variables";
 .v-badge {
   font-size: 0.8rem;
-  background: #252525;
+  background: $color-grey-light;
   padding: 0.4rem 0.8rem;
   display: inline-block;
   font-weight: 600;

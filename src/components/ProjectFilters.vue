@@ -41,7 +41,7 @@ const emits = defineEmits<{
     line-height: 1;
     text-transform: uppercase;
     color: $color-white;
-    background: $color-dark-accent;
+    background: $color-grey-light;
     margin: 0 0.3rem 0.5rem 0.3rem;
     border-radius: 0.2rem;
     &:hover,

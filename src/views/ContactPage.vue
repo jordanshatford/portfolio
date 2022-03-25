@@ -41,7 +41,7 @@ import { user } from "@/utils/user"
 @import "@/assets/scss/abstracts/variables";
 .contactpage {
   &__col {
-    @media (max-width: 768px) {
+    @media (max-width: $breakpoint-md) {
       &:nth-child(2) {
         margin-top: 1.5rem;
       }
@@ -50,24 +50,24 @@ import { user } from "@/utils/user"
       color: #444444;
       padding: 20px;
       width: 100%;
-      background: rgba(255, 255, 255, 0.08);
+      background: $color-grey;
       svg {
         font-size: 24px;
         color: $color-primary;
         border-radius: 50%;
         padding: 14px;
         float: left;
-        background: rgba(255, 255, 255, 0.1);
+        background: $color-grey-light;
       }
       h3 {
         font-size: 20px;
-        color: rgba(255, 255, 255, 0.5);
+        color: $color-grey-lightest;
         font-weight: 700;
         margin: 10px 0 8px 68px;
       }
       p {
         padding: 0;
-        color: #fff;
+        color: $color-white;
         line-height: 24px;
         font-size: 14px;
         margin: 0 0 0 68px;
@@ -83,7 +83,7 @@ import { user } from "@/utils/user"
       margin-right: 10px;
     }
     &__icon {
-      color: #fff !important;
+      color: $color-white !important;
       transition: 0.3s;
       &:hover {
         color: $color-primary !important;

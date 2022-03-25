@@ -41,7 +41,7 @@ defineProps<Props>()
   &__container {
     width: 100%;
     text-align: center;
-    background: rgba(204, 204, 204, 0.1);
+    background: $color-grey;
     padding: 40px 20px;
     transition: all ease-in-out 0.3s;
   }
@@ -82,7 +82,7 @@ defineProps<Props>()
       padding: 0.4rem 0.6rem 0.4rem 0.6rem;
       border-radius: 0.25rem;
       span {
-        color: #fff;
+        color: $color-white;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -96,7 +96,7 @@ defineProps<Props>()
       &:hover {
         cursor: pointer;
         border: 0.125rem solid $color-primary-accent;
-        background: rgba(255, 255, 255, 0.12);
+        background: $color-grey-light;
       }
     }
   }

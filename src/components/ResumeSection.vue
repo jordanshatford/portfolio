@@ -3,9 +3,9 @@
     <h3 class="resume-section__title">{{ section.title }}</h3>
     <div v-for="(item, index) in section.items" :key="index" class="resume-section__item">
       <h4>{{ item.title }}</h4>
-      <h5 v-for="(range, index) in item.dateRanges" :key="index">
+      <v-badge v-for="(range, index) in item.dateRanges" :key="index">
         {{ range.start.getFullYear() }} - {{ range?.end?.getFullYear() ?? "Present" }}
-      </h5>
+      </v-badge>
       <p>{{ item.description }}</p>
       <p v-if="item.longDescriptions?.length === 1">{{ item.longDescriptions[0] }}</p>
       <div v-else>
@@ -40,7 +40,7 @@ defineProps<Props>()
   &__item {
     padding: 0 0 20px 20px;
     margin-top: -2px;
-    border-left: 2px solid rgba(255, 255, 255, 0.2);
+    border-left: 2px solid $color-grey-light;
     position: relative;
     h4 {
       line-height: 18px;
@@ -49,15 +49,6 @@ defineProps<Props>()
       text-transform: uppercase;
       color: $color-primary;
       margin-bottom: 10px;
-    }
-    h5 {
-      font-size: 16px;
-      background: rgba(255, 255, 255, 0.15);
-      padding: 5px 15px;
-      display: inline-block;
-      font-weight: 600;
-      margin-bottom: 10px;
-      margin-right: 0.5rem;
     }
     ul {
       padding-left: 20px;

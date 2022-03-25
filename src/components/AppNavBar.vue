@@ -56,7 +56,7 @@ const showMobileMenu = ref<boolean>(false)
     padding: 0;
     font-size: 16px;
     font-weight: 400;
-    color: rgba(255, 255, 255, 0.7);
+    color: $color-grey-lightest;
     white-space: nowrap;
     transition: 0.3s;
   }
@@ -95,7 +95,7 @@ const showMobileMenu = ref<boolean>(false)
   position: fixed;
   right: 15px;
   top: 15px;
-  @media (max-width: 991px) {
+  @media (max-width: $breakpoint-lg) {
     display: block;
   }
 }
@@ -126,7 +126,7 @@ const showMobileMenu = ref<boolean>(false)
     padding: 10px 0;
     overflow-y: auto;
     transition: 0.3s;
-    border: 2px solid rgba(255, 255, 255, 0.2);
+    border: 2px solid $color-grey-light;
   }
   li {
     padding: 12px 20px;

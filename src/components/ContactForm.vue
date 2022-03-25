@@ -34,8 +34,9 @@ function onSubmit() {
 </script>
 
 <style scoped lang="scss">
+@import "@/assets/scss/abstracts/variables";
 .contactform {
   padding: 30px;
-  background: rgba(255, 255, 255, 0.08);
+  background: $color-grey;
 }
 </style>

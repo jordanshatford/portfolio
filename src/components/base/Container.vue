@@ -20,23 +20,23 @@ defineProps<Props>()
 <style scoped lang="scss">
 @import "@/assets/scss/abstracts/variables";
 .v-container {
-  background: rgba(0, 0, 0, 0.9);
+  background: $color-grey-dark;
   padding: 30px;
   &__title {
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 600;
     padding: 0;
     line-height: 1px;
     margin: 0 0 20px 0;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: #aaaaaa;
+    color: $color-grey-lightest;
     &::after {
       content: "";
       width: 120px;
       height: 1px;
       display: inline-block;
-      background: $color-primary-accent;
+      background: $color-primary;
       margin: 4px 10px;
     }
   }
