@@ -8,6 +8,6 @@ export default {
     },
   ],
   descriptions: [
-    "Development on a full project utilizing Vue.js, Typescript, SCSS, and C++. Performing code reviews on others work. Refactoring code to reduce duplication, increase code quality and ensure easier maintainability.",
+    "Development on a full stack project utilizing Vue.js, Typescript, SCSS, and C++. Performing code reviews on others work. Refactoring code to reduce duplication, increase code quality and ensure easier maintainability.",
   ],
 }
