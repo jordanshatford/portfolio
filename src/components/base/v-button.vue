@@ -7,10 +7,10 @@
 <style scoped lang="scss">
 @import "@/assets/scss/abstracts/variables";
 .v-button {
+  color: $color-white;
   background: $color-primary;
   border: 0;
   padding: 0.75rem 1.5rem;
-  color: $color-white;
   transition: 0.4s;
   border-radius: 0.25rem;
   &:hover {

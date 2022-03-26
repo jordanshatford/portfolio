@@ -6,10 +6,10 @@
 @import "@/assets/scss/abstracts/variables";
 .v-badge {
   font-size: $font-sm;
-  background: $color-grey-light;
-  padding: 0.4rem 0.8rem;
-  display: inline-block;
   font-weight: $font-bold;
+  background: $color-grey-light;
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
   margin-bottom: 0.5rem;
   margin-right: 0.5rem;
 }

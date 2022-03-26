@@ -21,32 +21,31 @@ defineProps<Props>()
 @import "@/assets/scss/abstracts/variables";
 .v-container {
   background: $color-grey-dark;
-  padding: 30px;
+  padding: 2rem;
   &__title {
     font-size: $font-base;
     font-weight: $font-bold;
-    padding: 0;
-    line-height: 1px;
-    margin: 0 0 20px 0;
-    letter-spacing: 2px;
     text-transform: uppercase;
     color: $color-grey-lightest;
+    padding: 0;
+    margin: 0 0 1rem 0;
+    letter-spacing: 0.2rem;
     &::after {
       content: "";
-      width: 120px;
-      height: 1px;
+      width: 6rem;
+      height: 0.1rem;
       display: inline-block;
       background: $color-primary;
-      margin: 4px 10px;
+      margin: 0.3rem 0.7rem;
     }
   }
   &__subtitle {
-    margin: 0;
-    margin: -15px 0 15px 0;
     font-size: $font-xxl;
     font-weight: $font-bold;
     text-transform: uppercase;
     color: $color-white;
+    margin: 0;
+    margin: -1rem 0 1rem 0;
   }
 }
 </style>
