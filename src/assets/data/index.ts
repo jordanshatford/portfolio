@@ -27,5 +27,4 @@ export interface MyInfo {
   job: Experience
   socials: Record<string, string>
   pictureUrl: string
-  resumeUrl: string
 }

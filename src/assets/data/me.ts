@@ -18,7 +18,6 @@ export const me: MyInfo = {
     linkedin: "https://www.linkedin.com/in/jordan-shatford",
   },
   pictureUrl: "https://avatars.githubusercontent.com/u/37837288?v=4",
-  resumeUrl: "/files/resume.pdf",
 }
 
 export default me
