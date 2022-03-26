@@ -1,7 +1,7 @@
 <template>
   <div class="resume-section">
-    <h3 class="resume-section__title">{{ section.title }}</h3>
-    <div v-for="(item, index) in section.items" :key="index" class="resume-section__item">
+    <h3 class="resume-section__title">{{ title }}</h3>
+    <div v-for="(item, index) in items" :key="index" class="resume-section__item">
       <h4>{{ item.title }}</h4>
       <v-badge v-for="(range, index) in item.dateRanges" :key="index">
         {{ range.start.toLocaleString("en-US", { month: "short" }) }}
@@ -9,12 +9,12 @@
         <span v-if="range.end">{{ range.end.toLocaleString("en-US", { month: "short" }) }}</span>
         {{ range?.end?.getFullYear() ?? "Present" }}
       </v-badge>
-      <p>{{ item.description }}</p>
+      <p>{{ item.organization }}, {{ item.location }}</p>
       <div class="resume-section__item__long-description">
-        <p v-if="item.longDescriptions?.length === 1">{{ item.longDescriptions[0] }}</p>
+        <p v-if="item.descriptions?.length === 1">{{ item.descriptions[0] }}</p>
         <div v-else>
           <ul>
-            <li v-for="(description, index) in item.longDescriptions" :key="index">{{ description }}</li>
+            <li v-for="(description, index) in item.descriptions" :key="index">{{ description }}</li>
           </ul>
         </div>
       </div>
@@ -23,10 +23,11 @@
 </template>
 
 <script setup lang="ts">
-import type { ResumeSection } from "@/utils/types"
+import type { Experience } from "@/assets/data"
 
 interface Props {
-  section: ResumeSection
+  title: string
+  items: Experience[]
 }
 
 defineProps<Props>()

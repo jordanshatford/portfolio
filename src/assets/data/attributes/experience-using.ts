@@ -1,0 +1,20 @@
+export default {
+  title: "Experience Using",
+  values: [
+    "Linux",
+    "Prettier",
+    "ESLint",
+    "pnpm",
+    "TailwindCSS",
+    "Bootstrap",
+    "Sentry",
+    "pre-commit",
+    "Vercel",
+    "Heroku",
+    "Codecov",
+    "Atlassian",
+    "p5.js",
+    "Jest",
+    "Vite",
+  ],
+}

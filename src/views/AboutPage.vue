@@ -2,36 +2,36 @@
   <v-container class="aboutpage" title="About" subtitle="About Me">
     <div class="row">
       <div class="col-lg-4">
-        <img :src="user.profilePicUrl" class="img-fluid w-100" alt="profile picture" />
+        <img :src="me.pictureUrl" class="img-fluid w-100" alt="profile picture" />
       </div>
       <div class="col-lg-8 pt-4 pt-lg-0 aboutpage__description">
         <h3>
-          {{ user.jobTitle }} <span>at {{ user.jobCompany }}</span>
+          {{ me.job.title }} <span>at {{ me.job.organization }}</span>
         </h3>
         <p class="fst-italic">
-          {{ user.jobDescription }}
+          {{ me.job.descriptions[0] }}
         </p>
         <div class="row">
           <div class="col-lg-6">
             <ul>
-              <about-list-item title="Birthday" :value="user.dateOfBirth.toDateString().substring(4)"></about-list-item>
-              <about-list-item title="Email" :value="user.primaryEmail"></about-list-item>
-              <about-list-item title="Location" :value="user.location"></about-list-item>
+              <about-list-item title="Birthday" :value="me.dob.toDateString().substring(4)"></about-list-item>
+              <about-list-item title="Email" :value="me.email"></about-list-item>
+              <about-list-item title="Location" :value="me.location"></about-list-item>
             </ul>
           </div>
           <div class="col-lg-6">
             <ul>
               <about-list-item title="Age" :value="age"></about-list-item>
-              <about-list-item title="Degree" :value="user.degree"></about-list-item>
-              <about-list-item title="Language" :value="user.primaryLanguage"></about-list-item>
+              <about-list-item title="Degree" :value="me.degree"></about-list-item>
+              <about-list-item title="Language" :value="me.language"></about-list-item>
             </ul>
           </div>
         </div>
-        <p>{{ user.bio }}</p>
+        <p>{{ me.bio }}</p>
       </div>
     </div>
   </v-container>
-  <v-container v-for="(attribute, index) in user.attributes" :title="attribute.title" :key="index">
+  <v-container v-for="(attribute, index) in attributes" :title="attribute.title" :key="index">
     <div class="row">
       <skill-card v-for="(skill, index) in attribute.values" :key="index" :name="skill" />
     </div>
@@ -39,13 +39,13 @@
 </template>
 
 <script setup lang="ts">
+import { attributes, me } from "@/assets/data"
 import { computed } from "vue"
-import { user } from "@/utils/user"
 import AboutListItem from "@/components/AboutListItem.vue"
 import SkillCard from "@/components/SkillCard.vue"
 
 const age = computed<number>(() => {
-  const ageDiffMs = Date.now() - user.dateOfBirth.getTime()
+  const ageDiffMs = Date.now() - me.dob.getTime()
   return Math.abs(new Date(ageDiffMs).getUTCFullYear() - 1970)
 })
 </script>
