@@ -3,7 +3,7 @@
 @mixin base-input-style {
   border-radius: 0;
   box-shadow: none;
-  font-size: 1rem;
+  font-size: $font-base;
   background: $color-grey-light;
   border: 0;
   transition: 0.3s;

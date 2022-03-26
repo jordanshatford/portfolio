@@ -23,7 +23,7 @@ defineProps<Props>()
   background: $color-grey-dark;
   padding: 30px;
   &__title {
-    font-size: 14px;
+    font-size: $font-base;
     font-weight: 600;
     padding: 0;
     line-height: 1px;
@@ -43,7 +43,7 @@ defineProps<Props>()
   &__subtitle {
     margin: 0;
     margin: -15px 0 15px 0;
-    font-size: 36px;
+    font-size: $font-xxl;
     font-weight: 700;
     text-transform: uppercase;
     color: $color-white;

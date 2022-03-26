@@ -24,7 +24,7 @@ import { RouteNameConstants } from "@/router"
   h1 {
     margin: 0;
     margin-right: auto;
-    font-size: 30px;
+    font-size: $font-xxl;
     padding: 0;
     line-height: 1;
     font-weight: 700;
@@ -53,7 +53,7 @@ import { RouteNameConstants } from "@/router"
     @media (max-width: $breakpoint-md) {
       height: 60px;
       h1 {
-        font-size: 26px;
+        font-size: $font-xl;
       }
     }
   }

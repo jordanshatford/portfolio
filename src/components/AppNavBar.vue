@@ -54,7 +54,7 @@ const showMobileMenu = ref<boolean>(false)
     align-items: center;
     justify-content: space-between;
     padding: 0;
-    font-size: 16px;
+    font-size: $font-md;
     font-weight: 400;
     color: $color-grey-lightest;
     white-space: nowrap;
@@ -87,7 +87,6 @@ const showMobileMenu = ref<boolean>(false)
 }
 .mobile-nav-toggle {
   color: $color-white;
-  font-size: 28px;
   cursor: pointer;
   display: none;
   line-height: 0;
@@ -136,7 +135,7 @@ const showMobileMenu = ref<boolean>(false)
   }
   a,
   a:focus {
-    font-size: 16px;
+    font-size: $font-md;
     position: relative;
   }
 }

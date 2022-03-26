@@ -56,10 +56,10 @@ const age = computed<number>(() => {
   &__description {
     h3 {
       font-weight: 700;
-      font-size: 2rem;
+      font-size: $font-xxl;
       color: $color-primary;
       span {
-        font-size: 1.25rem;
+        font-size: $font-lg;
         color: $color-white;
       }
     }

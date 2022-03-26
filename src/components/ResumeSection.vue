@@ -37,7 +37,7 @@ defineProps<Props>()
 @import "@/assets/scss/abstracts/variables";
 .resume-section {
   &__title {
-    font-size: 26px;
+    font-size: $font-xl;
     font-weight: 700;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -50,7 +50,7 @@ defineProps<Props>()
     position: relative;
     h4 {
       line-height: 18px;
-      font-size: 18px;
+      font-size: $font-md;
       font-weight: 600;
       text-transform: uppercase;
       color: $color-primary;

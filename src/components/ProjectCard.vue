@@ -73,21 +73,17 @@ const imageIsAvatar = computed(() => {
     justify-content: center;
     margin-bottom: 20px;
     transform-style: preserve-3d;
-    i {
-      color: $color-white;
-      font-size: 28px;
-    }
   }
   &__title {
     font-weight: 700;
     margin-bottom: 15px;
-    font-size: 24px;
+    font-size: $font-xl;
     a {
       color: $color-white;
     }
   }
   &__description {
-    font-size: 14px;
+    font-size: $font-base;
     color: $color-grey-lightest;
   }
   &__links {

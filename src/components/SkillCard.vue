@@ -37,7 +37,7 @@ defineProps<Props>()
       margin: 0;
       padding: 0;
       line-height: 1;
-      font-size: 1rem;
+      font-size: $font-base;
     }
   }
   @media (max-width: $breakpoint-md) {

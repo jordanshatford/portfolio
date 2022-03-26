@@ -5,7 +5,7 @@
 <style scoped lang="scss">
 @import "@/assets/scss/abstracts/variables";
 .v-badge {
-  font-size: 0.8rem;
+  font-size: $font-sm;
   background: $color-grey-light;
   padding: 0.4rem 0.8rem;
   display: inline-block;

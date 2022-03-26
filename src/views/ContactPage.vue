@@ -52,7 +52,6 @@ import { me } from "@/assets/data"
       width: 100%;
       background: $color-grey;
       svg {
-        font-size: 24px;
         color: $color-primary;
         border-radius: 50%;
         padding: 14px;
@@ -60,7 +59,7 @@ import { me } from "@/assets/data"
         background: $color-grey-light;
       }
       h3 {
-        font-size: 20px;
+        font-size: $font-lg;
         color: $color-grey-lightest;
         font-weight: 700;
         margin: 10px 0 8px 68px;
@@ -69,7 +68,7 @@ import { me } from "@/assets/data"
         padding: 0;
         color: $color-white;
         line-height: 24px;
-        font-size: 14px;
+        font-size: $font-base;
         margin: 0 0 0 68px;
       }
     }

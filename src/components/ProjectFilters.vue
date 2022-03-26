@@ -36,7 +36,7 @@ const emits = defineEmits<{
     cursor: pointer;
     display: inline-block;
     padding: 0.5rem 0.8rem 0.6rem 0.8rem;
-    font-size: 0.9rem;
+    font-size: $font-sm;
     font-weight: 600;
     line-height: 1;
     text-transform: uppercase;
