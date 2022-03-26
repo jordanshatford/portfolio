@@ -1,5 +1,20 @@
 import type { Resume, User } from "@/utils/types"
 
+const relevantCoursesDal = [
+  "Advanced Database Systems",
+  "Cloud Computing",
+  "Data Structures and Algorithms",
+  "Design and Analysis of Algorithms",
+  "Designing User Interfaces",
+  "Intro to Computer Organization/Assembly Language",
+  "Network Computing",
+  "Network Security",
+  "Operating Systems",
+  "Principles of Programming Languages",
+  "Software Development",
+  "Technology Innovation",
+]
+
 const resume: Resume = {
   education: {
     title: "Education",
@@ -14,8 +29,9 @@ const resume: Resume = {
         ],
         description: "Dalhousie University, Halifax, NS",
         longDescriptions: [
-          "GPA: 3.88/4.3",
+          "GPA: 3.92/4.3",
           "Participated in the Cooperative program which consisted of three co-op placement terms.",
+          `Completed relevant courses including ${relevantCoursesDal.join(", ")}.`,
         ],
       },
     ],
