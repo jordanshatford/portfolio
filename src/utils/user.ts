@@ -1,55 +1,4 @@
-interface Attributes {
-  title: string
-  values: string[]
-}
-
-interface DateRange {
-  start: Date
-  end?: Date
-}
-
-interface ResumeSectionItem {
-  title: string
-  dateRanges: DateRange[]
-  description: string
-  longDescriptions: string[]
-}
-
-export interface ResumeSection {
-  title: string
-  items: ResumeSectionItem[]
-}
-
-interface Resume {
-  education: ResumeSection
-  professionalExperience: ResumeSection
-}
-
-interface User {
-  firstName: string
-  lastName: string
-  profilePicUrl: string
-  jobTitle: string
-  jobCompany: string
-  jobDescription: string
-  bio: string
-  dateOfBirth: Date
-  age: number
-  location: string
-  degree: string
-  primaryEmail: string
-  primaryLanguage: string
-  resume: Resume
-  resumeLink: string
-  socialLinks: Record<string, string>
-  attributes: Attributes[]
-}
-
-function ageFromDate(date: Date) {
-  const ageDiffMs = Date.now() - date.getTime()
-  const age = Math.abs(new Date(ageDiffMs).getUTCFullYear() - 1970)
-  return age
-}
+import type { Resume, User } from "@/utils/types"
 
 const resume: Resume = {
   education: {
@@ -116,8 +65,7 @@ export const user: User = {
   jobDescription:
     "Development on a full project utilizing Vue.js, Typescript, SCSS, and C++. Performing code reviews on others work. Refactoring code to reduce duplication, increase code quality and ensure easier maintainability.",
   bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In laoreet quam id hendrerit consequat. Sed nec orci venenatis, mollis mauris et, fermentum lorem. In sit amet tellus est. Curabitur pretium neque sed sem lacinia ullamcorper. Maecenas eget metus sollicitudin.",
-  dateOfBirth: new Date("1998-11-21T04:00:00.000Z"),
-  age: ageFromDate(new Date("1998-11-21T04:00:00.000Z")),
+  dateOfBirth: new Date("November 21, 1998"),
   location: "Halifax, NS, Canada",
   degree: "Bachelor Comp Sci",
   primaryEmail: "jordanshatford@live.com",

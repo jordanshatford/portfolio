@@ -21,7 +21,7 @@
           </div>
           <div class="col-lg-6">
             <ul>
-              <about-list-item title="Age" :value="user.age"></about-list-item>
+              <about-list-item title="Age" :value="age"></about-list-item>
               <about-list-item title="Degree" :value="user.degree"></about-list-item>
               <about-list-item title="Language" :value="user.primaryLanguage"></about-list-item>
             </ul>
@@ -39,9 +39,15 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from "vue"
 import { user } from "@/utils/user"
 import AboutListItem from "@/components/AboutListItem.vue"
 import SkillCard from "@/components/SkillCard.vue"
+
+const age = computed<number>(() => {
+  const ageDiffMs = Date.now() - user.dateOfBirth.getTime()
+  return Math.abs(new Date(ageDiffMs).getUTCFullYear() - 1970)
+})
 </script>
 
 <style scoped lang="scss">
@@ -53,6 +59,7 @@ import SkillCard from "@/components/SkillCard.vue"
       font-size: 2rem;
       color: $color-primary;
       span {
+        font-size: 1.25rem;
         color: $color-white;
       }
     }

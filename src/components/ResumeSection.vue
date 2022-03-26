@@ -23,7 +23,7 @@
 </template>
 
 <script setup lang="ts">
-import type { ResumeSection } from "@/utils/user"
+import type { ResumeSection } from "@/utils/types"
 
 interface Props {
   section: ResumeSection
