@@ -31,7 +31,7 @@ const showMobileMenu = ref<boolean>(false)
 @import "@/assets/scss/abstracts/variables";
 .navbar {
   padding: 0;
-  margin-top: 35px;
+  margin: 0;
   ul {
     margin: 0;
     padding: 0;

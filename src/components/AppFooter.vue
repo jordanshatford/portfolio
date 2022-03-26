@@ -1,11 +1,9 @@
 <template>
   <div class="app-footer">
-    <div>
-      <div class="app-footer__copyright">© {{ config.COPYRIGHT.YEAR }} {{ config.COPYRIGHT.CREATOR }}</div>
-    </div>
-    <a :href="config.COPYRIGHT.REPO" target="_blank"
-      ><simple-icon class="app-footer__icon" name="github" size="32px"></simple-icon
-    ></a>
+    <div class="app-footer__copyright">© {{ config.COPYRIGHT.YEAR }} {{ config.COPYRIGHT.CREATOR }}</div>
+    <a :href="config.COPYRIGHT.REPO" target="_blank">
+      <simple-icon name="github" size="32px" class="app-footer__icon"></simple-icon>
+    </a>
   </div>
 </template>
 

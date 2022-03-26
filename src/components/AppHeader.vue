@@ -1,5 +1,5 @@
 <template>
-  <header id="header" class="appheader">
+  <header class="app-header">
     <div class="container">
       <h1>
         <router-link :to="RouteNameConstants.ABOUT">Jordan Shatford</router-link>
@@ -10,17 +10,23 @@
 </template>
 
 <script setup lang="ts">
-import AppNavBar from "@/components/AppNavBar.vue"
-import { RouteNameConstants } from "@/router"
+import AppNavBar from "@/components/AppNavBar.vue";
+import { RouteNameConstants } from "@/router";
 </script>
 
 <style scoped lang="scss">
 @import "@/assets/scss/abstracts/variables";
-#header {
+.app-header {
   display: flex;
   align-items: center;
   z-index: 997;
   overflow-y: auto;
+  height: 80px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  background: $color-grey-dark;
   h1 {
     margin: 0;
     margin-right: auto;
@@ -36,25 +42,14 @@ import { RouteNameConstants } from "@/router"
       text-decoration: none;
     }
   }
-  &.appheader {
-    height: 80px;
-    position: fixed;
-    left: 0;
-    top: 0;
-    right: 0;
-    background: $color-grey-dark;
-    .container {
-      display: flex;
-      align-items: center;
-    }
-    .navbar {
-      margin: 0;
-    }
-    @media (max-width: $breakpoint-md) {
-      height: 60px;
-      h1 {
-        font-size: $font-xl;
-      }
+  .container {
+    display: flex;
+    align-items: center;
+  }
+  @media (max-width: $breakpoint-md) {
+    height: 60px;
+    h1 {
+      font-size: $font-xl;
     }
   }
 }
