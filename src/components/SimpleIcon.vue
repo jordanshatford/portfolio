@@ -1,5 +1,10 @@
 <template>
-  <span v-if="icon" :style="{ color: `#${icon.hex}` }" class="simpleicon" v-html="icon.svg"></span>
+  <span
+    v-if="icon"
+    :style="{ color: `#${icon.hex}`, width: size, height: size }"
+    class="simpleicon"
+    v-html="icon.svg"
+  ></span>
   <ph-placeholder v-else :size="22" class="icon-item"></ph-placeholder>
 </template>
 
@@ -9,9 +14,10 @@ import { PhPlaceholder } from "phosphor-vue"
 
 interface Props {
   name: string
+  size?: string
 }
 
-const props = defineProps<Props>()
+const props = withDefaults(defineProps<Props>(), { size: "1rem" })
 
 function titleToSlug(title: string): string {
   return [
@@ -39,7 +45,11 @@ const icon = SimpleIcons.Get(iconSlug)
 
 <style lang="scss">
 .simpleicon {
+  display: inline-block;
   svg {
+    width: 100%;
+    height: 100%;
+    display: block;
     path {
       fill: currentColor;
     }

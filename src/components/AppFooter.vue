@@ -3,11 +3,9 @@
     <div>
       <div class="app-footer__copyright">© {{ config.COPYRIGHT.YEAR }} {{ config.COPYRIGHT.CREATOR }}</div>
     </div>
-    <div class="app-footer__icon-container">
-      <a :href="config.COPYRIGHT.REPO" target="_blank"
-        ><simple-icon class="app-footer__icon-container__icon" name="github"></simple-icon
-      ></a>
-    </div>
+    <a :href="config.COPYRIGHT.REPO" target="_blank"
+      ><simple-icon class="app-footer__icon" name="github" size="32px"></simple-icon
+    ></a>
   </div>
 </template>
 
@@ -31,14 +29,10 @@ import { config } from "@/utils/config"
     font-size: 16px;
     font-weight: 700;
   }
-  &__icon-container {
-    width: 32px;
-    height: 32px;
-    &__icon {
-      color: $color-grey-lightest !important;
-      &:hover {
-        color: $color-primary !important;
-      }
+  &__icon {
+    color: $color-grey-lightest !important;
+    &:hover {
+      color: $color-primary !important;
     }
   }
 }

@@ -1,7 +1,7 @@
 <template>
   <div class="skillcard col-lg-3 col-md-4">
     <div class="skillcard__iconbox">
-      <simple-icon class="skillcard__iconbox__icon" :name="name"></simple-icon>
+      <simple-icon class="skillcard__iconbox__icon" :name="name" size="2rem"></simple-icon>
       <h3>{{ name }}</h3>
     </div>
   </div>
@@ -30,7 +30,6 @@ defineProps<Props>()
       background: $color-grey-light;
     }
     &__icon {
-      width: 2rem;
       padding-right: 0.6rem;
     }
     h3 {

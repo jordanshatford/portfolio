@@ -20,7 +20,7 @@
               target="_blank"
               class="contactpage__sociallinks__link"
             >
-              <simple-icon class="contactpage__sociallinks__icon" :name="socialName"></simple-icon>
+              <simple-icon class="contactpage__sociallinks__icon" :name="socialName" size="20px"></simple-icon>
             </a>
           </div>
         </div>
@@ -75,11 +75,8 @@ import { me } from "@/assets/data"
     }
   }
   &__sociallinks {
-    padding-left: 10px;
-    display: flex;
+    margin: 0 0 0 68px;
     &__link {
-      width: 20px;
-      height: 20px;
       margin-right: 10px;
     }
     &__icon {
