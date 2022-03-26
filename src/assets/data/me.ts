@@ -6,7 +6,7 @@ export const me: MyInfo = {
     first: "Jordan",
     last: "Shatford",
   },
-  bio: "",
+  bio: "I am a full stack developer with a passion for learning and building things. I enjoy discovering simple solutions to complex problems. Currently exploring my extended interest in building responsive frontend applications using Vue.js and Svelte.",
   degree: "Bachelor of Computer Science",
   dob: new Date("November 21, 1998"),
   email: "jordanshatford@live.com",

@@ -8,7 +8,7 @@
         <h3>
           {{ me.job.title }} <span>at {{ me.job.organization }}</span>
         </h3>
-        <p class="fst-italic">
+        <p class="aboutpage__description__job">
           {{ me.job.descriptions[0] }}
         </p>
         <div class="row">
@@ -54,6 +54,9 @@ const age = computed<number>(() => {
 @import "@/assets/scss/abstracts/variables";
 .aboutpage {
   &__description {
+    &__job {
+      color: $color-grey-lightest;
+    }
     h3 {
       font-weight: $font-bold;
       font-size: $font-xxl;
