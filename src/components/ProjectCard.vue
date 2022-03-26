@@ -75,7 +75,7 @@ const imageIsAvatar = computed(() => {
     transform-style: preserve-3d;
   }
   &__title {
-    font-weight: 700;
+    font-weight: $font-bold;
     margin-bottom: 15px;
     font-size: $font-xl;
     a {

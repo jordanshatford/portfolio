@@ -55,7 +55,7 @@ const age = computed<number>(() => {
 .aboutpage {
   &__description {
     h3 {
-      font-weight: 700;
+      font-weight: $font-bold;
       font-size: $font-xxl;
       color: $color-primary;
       span {

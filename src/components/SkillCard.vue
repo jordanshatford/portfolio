@@ -33,7 +33,7 @@ defineProps<Props>()
       padding-right: 0.6rem;
     }
     h3 {
-      font-weight: 700;
+      font-weight: $font-bold;
       margin: 0;
       padding: 0;
       line-height: 1;

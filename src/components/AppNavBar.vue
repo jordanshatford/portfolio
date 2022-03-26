@@ -55,7 +55,7 @@ const showMobileMenu = ref<boolean>(false)
     justify-content: space-between;
     padding: 0;
     font-size: $font-md;
-    font-weight: 400;
+    font-weight: $font-normal;
     color: $color-grey-lightest;
     white-space: nowrap;
     transition: 0.3s;

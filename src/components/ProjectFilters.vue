@@ -37,7 +37,7 @@ const emits = defineEmits<{
     display: inline-block;
     padding: 0.5rem 0.8rem 0.6rem 0.8rem;
     font-size: $font-sm;
-    font-weight: 600;
+    font-weight: $font-bold;
     line-height: 1;
     text-transform: uppercase;
     color: $color-white;

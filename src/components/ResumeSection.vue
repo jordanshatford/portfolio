@@ -38,7 +38,7 @@ defineProps<Props>()
 .resume-section {
   &__title {
     font-size: $font-xl;
-    font-weight: 700;
+    font-weight: $font-bold;
     margin-top: 20px;
     margin-bottom: 20px;
     color: $color-white;
@@ -51,7 +51,7 @@ defineProps<Props>()
     h4 {
       line-height: 18px;
       font-size: $font-md;
-      font-weight: 600;
+      font-weight: $font-bold;
       text-transform: uppercase;
       color: $color-primary;
       margin-bottom: 10px;

@@ -27,7 +27,7 @@ import { config } from "@/utils/config"
   height: 80px;
   &__copyright {
     font-size: $font-md;
-    font-weight: 700;
+    font-weight: $font-bold;
   }
   &__icon {
     color: $color-grey-lightest !important;

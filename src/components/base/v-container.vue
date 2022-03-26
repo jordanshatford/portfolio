@@ -24,7 +24,7 @@ defineProps<Props>()
   padding: 30px;
   &__title {
     font-size: $font-base;
-    font-weight: 600;
+    font-weight: $font-bold;
     padding: 0;
     line-height: 1px;
     margin: 0 0 20px 0;
@@ -44,7 +44,7 @@ defineProps<Props>()
     margin: 0;
     margin: -15px 0 15px 0;
     font-size: $font-xxl;
-    font-weight: 700;
+    font-weight: $font-bold;
     text-transform: uppercase;
     color: $color-white;
   }

@@ -61,7 +61,7 @@ import { me } from "@/assets/data"
       h3 {
         font-size: $font-lg;
         color: $color-grey-lightest;
-        font-weight: 700;
+        font-weight: $font-bold;
         margin: 10px 0 8px 68px;
       }
       p {

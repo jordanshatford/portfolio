@@ -27,7 +27,7 @@ import { RouteNameConstants } from "@/router"
     font-size: $font-xxl;
     padding: 0;
     line-height: 1;
-    font-weight: 700;
+    font-weight: $font-bold;
     a,
     a:hover {
       color: $color-white;

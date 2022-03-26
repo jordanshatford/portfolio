@@ -72,7 +72,7 @@ function onSubmit() {
   &__alert {
     margin-top: 1rem;
     text-align: left;
-    font-weight: 600;
+    font-weight: $font-bold;
     &--error {
       padding: 15px;
       background: $color-error;

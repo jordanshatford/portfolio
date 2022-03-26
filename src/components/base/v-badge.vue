@@ -9,7 +9,7 @@
   background: $color-grey-light;
   padding: 0.4rem 0.8rem;
   display: inline-block;
-  font-weight: 600;
+  font-weight: $font-bold;
   margin-bottom: 0.5rem;
   margin-right: 0.5rem;
 }
