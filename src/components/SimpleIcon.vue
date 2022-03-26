@@ -5,12 +5,11 @@
     class="simpleicon"
     v-html="icon.svg"
   ></span>
-  <ph-placeholder v-else :size="22" class="icon-item"></ph-placeholder>
+  <span v-else :style="{ width: size, height: size }" class="simpleicon"> </span>
 </template>
 
 <script setup lang="ts">
 import SimpleIcons from "simple-icons"
-import { PhPlaceholder } from "phosphor-vue"
 
 interface Props {
   name: string
