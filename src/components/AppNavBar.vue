@@ -38,7 +38,7 @@ const showMobileMenu = ref<boolean>(false)
     display: flex;
     list-style: none;
     align-items: center;
-    @media (max-width: $breakpoint-lg) {
+    @media (max-width: $breakpoint-md) {
       display: none;
     }
   }
@@ -94,7 +94,7 @@ const showMobileMenu = ref<boolean>(false)
   position: fixed;
   right: 15px;
   top: 15px;
-  @media (max-width: $breakpoint-lg) {
+  @media (max-width: $breakpoint-md) {
     display: block;
   }
 }
