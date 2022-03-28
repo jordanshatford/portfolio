@@ -1,22 +1,21 @@
 <template>
   <div class="projectcard col-lg-4 col-md-6 d-flex align-items-stretch">
     <div class="projectcard__container">
-      <a v-if="!imageIsAvatar" :href="repository.homepageUrl" target="_blank">
-        <img :src="repository.openGraphImageUrl" class="projectcard__image" alt="Project Image" />
+      <a :href="project.homepageUrl" target="_blank">
+        <img :src="project.imageUrl" class="projectcard__image" alt="Project Image" />
       </a>
-      <div v-else class="projectcard__icon"><ph-app-window :size="32"></ph-app-window></div>
       <h4 class="projectcard__title">
-        <a :href="repository.homepageUrl">{{ repository.name }}</a>
+        <a :href="project.homepageUrl">{{ project.name }}</a>
       </h4>
-      <p class="projectcard__description">{{ repository.description }}</p>
-      <v-badge v-for="lang in repository.languages.edges" :key="lang.node.id">{{ lang.node.name }}</v-badge>
+      <p class="projectcard__description">{{ project.description }}</p>
+      <v-badge v-for="(lang, index) in [...project.tags, ...project.languages]" :key="index">{{ lang }}</v-badge>
       <div class="projectcard__links">
-        <a :href="repository.url" class="projectcard__links__link" target="_blank">
+        <a v-if="project.repoUrl" :href="project.repoUrl" class="projectcard__links__link" target="_blank">
           <span>Code <ph-git-branch :size="24"></ph-git-branch></span>
         </a>
         <a
-          v-if="repository.homepageUrl"
-          :href="repository.homepageUrl"
+          v-if="project.homepageUrl"
+          :href="project.homepageUrl"
           class="projectcard__links__link"
           target="_blank"
         >
@@ -28,19 +27,21 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from "vue"
-import { PhAppWindow, PhArrowSquareOut, PhGitBranch } from "phosphor-vue"
-import type { GithubRepository } from "@/utils/types"
+import { PhArrowSquareOut, PhGitBranch } from "phosphor-vue"
 
 interface Props {
-  repository: GithubRepository
+  project: {
+    name: string
+    description: string
+    repoUrl: string
+    homepageUrl: string
+    imageUrl: string
+    tags: string[]
+    languages: string[]
+  }
 }
 
-const props = defineProps<Props>()
-
-const imageIsAvatar = computed(() => {
-  return props.repository.openGraphImageUrl.includes("avatars.githubusercontent.com")
-})
+defineProps<Props>()
 </script>
 
 <style scoped lang="scss">
@@ -60,19 +61,6 @@ const imageIsAvatar = computed(() => {
     border: 0.125rem solid $color-primary;
     margin: 0 auto;
     margin-bottom: 20px;
-  }
-  &__icon {
-    margin: 0 auto;
-    width: 64px;
-    height: 64px;
-    background: $color-primary;
-    border-radius: 5px;
-    transition: all 0.3s ease-out 0s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-    transform-style: preserve-3d;
   }
   &__title {
     font-weight: $font-bold;

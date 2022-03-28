@@ -1,0 +1,47 @@
+[
+  {
+    "name": "Youtube to MP3",
+    "description": "Easily convert Youtube videos to MP3 (or other formats) directly through a web interface.",
+    "repoUrl": "https://github.com/jordanshatford/youtube-to-mp3",
+    "homepageUrl": "https://ytmp3.vercel.app",
+    "imageUrl": "https://repository-images.githubusercontent.com/356324525/0ebec7d6-1b09-4bbf-9909-f4fb513f77f7",
+    "tags": ["Web"],
+    "languages": ["Svelte", "TypeScript", "Python"]
+  },
+  {
+    "name": "Clip Queue",
+    "description": "An easy to use clip queue for your Twitch chat. Connects directly to your chat and queues unique clips submitted by your viewers.",
+    "repoUrl": "https://github.com/jordanshatford/clip-queue",
+    "homepageUrl": "https://clipqueue.vercel.app",
+    "imageUrl": "https://repository-images.githubusercontent.com/433584284/473d33e6-4a83-4bf6-9a30-8ae29429f06c",
+    "tags": ["Web"],
+    "languages": ["Vue", "TypeScript"]
+  },
+  {
+    "name": "WordlistJS",
+    "description": "A package to provide common English words from various dialects. These words are filtered and safe to use in many word games.",
+    "repoUrl": "https://github.com/jordanshatford/wordlist-js",
+    "homepageUrl": "https://www.npmjs.com/package/wordlist-js",
+    "imageUrl": "https://repository-images.githubusercontent.com/462912459/ef7fce13-6c18-4ffb-8a93-9d4cb33c766b",
+    "tags": ["Packages"],
+    "languages": ["TypeScript", "Mustache"]
+  },
+  {
+    "name": "VVurdle",
+    "description": "A Wordle clone written in VueJS. Allows selecting between a variety of word lengths.",
+    "repoUrl": "https://github.com/jordanshatford/vvurdle",
+    "homepageUrl": "https://vvurdle.vercel.app",
+    "imageUrl": "https://repository-images.githubusercontent.com/464525106/718dd3c9-f569-47fc-b416-32edd4a5ddcc",
+    "tags": ["Web"],
+    "languages": ["Vue", "TypeScript", "Sass"]
+  },
+  {
+    "name": "Portfolio",
+    "description": "A personal portfolio website for myself. Used to showcase my skills and projects.",
+    "repoUrl": "https://github.com/jordanshatford/portfolio",
+    "homepageUrl": "https://jordanshatford.vercel.app/",
+    "imageUrl": "https://repository-images.githubusercontent.com/470738243/6f859a6e-db64-4477-899f-9b4445226566",
+    "tags": ["Web"],
+    "languages": ["Vue", "TypeScript", "Sass"]
+  }
+]
