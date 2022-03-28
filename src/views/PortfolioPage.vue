@@ -1,7 +1,7 @@
 <template>
   <v-container class="portfolio-page" title="Portfolio" subtitle="My Projects">
     <div class="portfolio-page__filter">
-        <v-select v-model="activeFilter" :options="availableFilters" class="portfolio-page__filter__select"></v-select>
+      <v-select v-model="activeFilter" :options="availableFilters" class="portfolio-page__filter__select"></v-select>
     </div>
     <div class="row">
       <project-card v-for="(project, index) of filteredProjects" :key="index" :project="project"></project-card>

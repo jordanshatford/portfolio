@@ -1,10 +1,5 @@
 <template>
-  <textarea
-    class="v-textarea form-control"
-    :value="modelValue"
-    @input="emitUpdate($event.target)"
-    :rows="rows"
-  ></textarea>
+  <textarea class="v-textarea" :value="modelValue" @input="emitUpdate($event.target)" :rows="rows"></textarea>
 </template>
 
 <script setup lang="ts">
@@ -29,5 +24,9 @@ function emitUpdate(target: EventTarget | null) {
 .v-textarea {
   @include base-input-style;
   padding: 0.85rem 1.25rem;
+  width: 100%;
+  &:focus {
+    outline: 0;
+  }
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <input class="v-input form-control" :value="modelValue" @input="emitUpdate($event.target)" />
+  <input class="v-input" :value="modelValue" @input="emitUpdate($event.target)" />
 </template>
 
 <script setup lang="ts">
@@ -23,5 +23,9 @@ function emitUpdate(target: EventTarget | null) {
 .v-input {
   @include base-input-style;
   padding: 0.75rem 1.25rem;
+  width: 100%;
+  &:focus {
+    outline: 0;
+  }
 }
 </style>
