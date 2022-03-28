@@ -10,8 +10,8 @@
 </template>
 
 <script setup lang="ts">
-import AppNavBar from "@/components/AppNavBar.vue";
-import { RouteNameConstants } from "@/router";
+import AppNavBar from "@/components/AppNavBar.vue"
+import { RouteNameConstants } from "@/router"
 </script>
 
 <style scoped lang="scss">

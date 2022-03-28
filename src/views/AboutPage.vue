@@ -6,7 +6,7 @@
       </div>
       <div class="col-lg-8 pt-4 pt-lg-0 aboutpage__description">
         <h3>
-          {{ me.job.title }} <span>at {{ me.job.organization }}</span>
+          {{ me.job.title }} <span v-if="me.job.organization">at {{ me.job.organization }}</span>
         </h3>
         <p class="aboutpage__description__job">
           {{ me.job.descriptions[0] }}

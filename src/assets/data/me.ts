@@ -1,5 +1,24 @@
-import type { MyInfo } from "."
+import type { Experience, MyInfo } from "."
 import { experiences } from "./experience"
+
+const UNEMPLOYED = {
+  title: "Software Developer",
+  organization: "",
+  location: "",
+  dateRanges: [],
+  descriptions: [],
+}
+
+function isUnemployed(experiences: Experience[]): boolean {
+  for (const experience of experiences) {
+    for (const dateRange of experience.dateRanges) {
+      if (dateRange.start && !dateRange.end) {
+        return false
+      }
+    }
+  }
+  return true
+}
 
 export const me: MyInfo = {
   name: {
@@ -12,7 +31,7 @@ export const me: MyInfo = {
   email: "jordanshatford@live.com",
   location: "Halifax, NS, Canada",
   language: "English",
-  job: experiences[0],
+  job: isUnemployed(experiences) ? UNEMPLOYED : experiences[0],
   socials: {
     github: "https://github.com/jordanshatford",
     linkedin: "https://www.linkedin.com/in/jordan-shatford",
