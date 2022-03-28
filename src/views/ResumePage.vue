@@ -2,10 +2,10 @@
   <v-container class="resume-page" title="Resume" subtitle="My Experience">
     <div class="row">
       <div class="col-lg-6">
-        <resume-section title="Professional Experience" :items="experiences"></resume-section>
+        <resume-section title="Professional Experience" :items="info.experiences"></resume-section>
       </div>
       <div class="col-lg-6">
-        <resume-section title="Education" :items="educations"></resume-section>
+        <resume-section title="Education" :items="info.educations"></resume-section>
       </div>
     </div>
   </v-container>
@@ -13,5 +13,5 @@
 
 <script setup lang="ts">
 import ResumeSection from "@/components/ResumeSection.vue"
-import { experiences, educations } from "@/assets/data"
+import { info } from "@/assets/info"
 </script>

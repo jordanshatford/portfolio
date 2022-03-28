@@ -5,7 +5,7 @@
         <div class="contactpage__col__container">
           <ph-envelope-simple :size="56" weight="bold"></ph-envelope-simple>
           <h3>Email:</h3>
-          <p>{{ me.email }}</p>
+          <p>{{ info.email }}</p>
         </div>
       </div>
       <div class="contactpage__col col-md-6 d-flex align-items-stretch">
@@ -14,7 +14,7 @@
           <h3>Social Links:</h3>
           <div class="contactpage__sociallinks">
             <a
-              v-for="(socialLink, socialName) in me.socials"
+              v-for="(socialLink, socialName) in info.socials"
               :key="socialName"
               :href="socialLink"
               target="_blank"
@@ -32,9 +32,9 @@
 
 <script setup lang="ts">
 import { PhEnvelopeSimple, PhShareNetwork } from "phosphor-vue"
+import { info } from "@/assets/info"
 import SimpleIcon from "@/components/SimpleIcon.vue"
 import ContactForm from "@/components/ContactForm.vue"
-import { me } from "@/assets/data"
 </script>
 
 <style scoped lang="scss">

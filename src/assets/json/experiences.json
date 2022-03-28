@@ -1,0 +1,36 @@
+[
+  {
+    "title": "Software Developer",
+    "organization": "Nautel",
+    "location": "Hackett's Cove, NS",
+    "dateRanges": [
+      {
+        "start": "September 1, 2021",
+        "end": null
+      }
+    ],
+    "descriptions": [
+      "Development on a full stack project utilizing Vue.js, Typescript, SCSS, and C++. Performing code reviews on others work. Refactoring code to reduce duplication, increase code quality and ensure easier maintainability."
+    ]
+  },
+  {
+    "title": "Software Developer Co-op",
+    "organization": "Nautel",
+    "location": "Hackett's Cove, NS",
+    "dateRanges": [
+      {
+        "start": "May 1, 2019",
+        "end": "August 1, 2019"
+      },
+      {
+        "start": "January 1, 2020",
+        "end": "May 1, 2020"
+      },
+      {
+        "start": "September 1, 2020",
+        "end": "December 1, 2020"
+      }
+    ],
+    "descriptions": []
+  }
+]

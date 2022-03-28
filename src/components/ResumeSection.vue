@@ -4,10 +4,10 @@
     <div v-for="(item, index) in items" :key="index" class="resume-section__item">
       <h4>{{ item.title }}</h4>
       <v-badge v-for="(range, index) in item.dateRanges" :key="index">
-        {{ range.start.toLocaleString("en-US", { month: "short" }) }}
-        {{ range.start.getFullYear() }} -
-        <span v-if="range.end">{{ range.end.toLocaleString("en-US", { month: "short" }) }}</span>
-        {{ range?.end?.getFullYear() ?? "Present" }}
+        {{ new Date(range.start).toLocaleString("en-US", { month: "short" }) }}
+        {{ new Date(range.start).getFullYear() }} -
+        <span v-if="range.end">{{ new Date(range.end).toLocaleString("en-US", { month: "short" }) }}</span>
+        {{ range.end ? new Date(range.end).getFullYear() : "Present" }}
       </v-badge>
       <p>{{ item.organization }}, {{ item.location }}</p>
       <div class="resume-section__item__long-description">
@@ -23,11 +23,18 @@
 </template>
 
 <script setup lang="ts">
-import type { Experience } from "@/assets/data"
-
 interface Props {
   title: string
-  items: Experience[]
+  items: {
+    title: string
+    dateRanges: {
+      start: string
+      end: string | null
+    }[]
+    organization: string
+    location: string
+    descriptions: string[]
+  }[]
 }
 
 defineProps<Props>()
