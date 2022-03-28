@@ -1,10 +1,7 @@
 <template>
-  <v-container class="portfoliopage" title="Portfolio" subtitle="My Projects">
-    <div class="row">
-      <div class="col-lg-9"></div>
-      <div class="col-lg-3 d-flex justify-content-center">
-        <v-select v-model="activeFilter" :options="availableFilters"></v-select>
-      </div>
+  <v-container class="portfolio-page" title="Portfolio" subtitle="My Projects">
+    <div class="portfolio-page__filter">
+        <v-select v-model="activeFilter" :options="availableFilters" class="portfolio-page__filter__select"></v-select>
     </div>
     <div class="row">
       <project-card v-for="(project, index) of filteredProjects" :key="index" :project="project"></project-card>
@@ -37,3 +34,24 @@ const filteredProjects = computed(() => {
   })
 })
 </script>
+
+<style scoped lang="scss">
+@import "@/assets/scss/abstracts/variables";
+.portfolio-page {
+  &__filter {
+    display: flex;
+    width: 100%;
+    &__select {
+      float: right;
+      flex-basis: 32%;
+      margin-left: auto;
+      @media (max-width: $breakpoint-lg) {
+        flex-basis: 48%;
+      }
+      @media (max-width: $breakpoint-md) {
+        flex-basis: 100%;
+      }
+    }
+  }
+}
+</style>
