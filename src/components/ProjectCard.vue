@@ -13,12 +13,7 @@
         <a v-if="project.repoUrl" :href="project.repoUrl" class="projectcard__links__link" target="_blank">
           <span>Code <ph-git-branch :size="24"></ph-git-branch></span>
         </a>
-        <a
-          v-if="project.homepageUrl"
-          :href="project.homepageUrl"
-          class="projectcard__links__link"
-          target="_blank"
-        >
+        <a v-if="project.homepageUrl" :href="project.homepageUrl" class="projectcard__links__link" target="_blank">
           <span>View <ph-arrow-square-out :size="24"></ph-arrow-square-out></span>
         </a>
       </div>

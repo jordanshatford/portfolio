@@ -21,18 +21,18 @@ const FILTER_ALLOW_ALL = "all"
 const activeFilter = ref<string>(FILTER_ALLOW_ALL)
 
 const availableFilters = info.projects.reduce((filters, project) => {
-  project.tags.forEach(t => filters.add(t))
-  project.languages.forEach(l => filters.add(l))
+  project.tags.forEach((t) => filters.add(t))
+  project.languages.forEach((l) => filters.add(l))
   return filters
 }, new Set<string>([FILTER_ALLOW_ALL]))
 
 const filteredProjects = computed(() => {
-  return info.projects.filter(project => {
+  return info.projects.filter((project) => {
     if (activeFilter.value.toLowerCase() === FILTER_ALLOW_ALL) {
       return true
     }
-    const filterInTags = project.tags.some(tag => activeFilter.value.toLowerCase() === tag.toLowerCase())
-    const filterInLanguage = project.languages.some(lang => activeFilter.value.toLowerCase() === lang.toLowerCase())
+    const filterInTags = project.tags.some((tag) => activeFilter.value.toLowerCase() === tag.toLowerCase())
+    const filterInLanguage = project.languages.some((lang) => activeFilter.value.toLowerCase() === lang.toLowerCase())
     return filterInLanguage || filterInTags
   })
 })

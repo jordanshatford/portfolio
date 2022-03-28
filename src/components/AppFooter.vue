@@ -9,7 +9,7 @@
 
 <script setup lang="ts">
 import SimpleIcon from "@/components/SimpleIcon.vue"
-import { config } from "@/utils/config"
+import { config } from "@/assets/config"
 </script>
 
 <style scoped lang="scss">

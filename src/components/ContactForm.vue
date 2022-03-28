@@ -26,7 +26,7 @@
 <script setup lang="ts">
 import { reactive, ref } from "vue"
 import emailjs from "@emailjs/browser"
-import { config } from "@/utils/config"
+import { config } from "@/assets/config"
 
 const isSending = ref<boolean>(false)
 const hasErrorSending = ref<boolean>(false)

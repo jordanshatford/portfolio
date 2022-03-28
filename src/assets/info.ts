@@ -13,8 +13,8 @@ const UNEMPLOYED_JOB = {
 }
 
 function isEmployed() {
-  return experiences.some(experience => {
-    return experience.dateRanges.some(range => {
+  return experiences.some((experience) => {
+    return experience.dateRanges.some((range) => {
       return range.start && !range.end
     })
   })
