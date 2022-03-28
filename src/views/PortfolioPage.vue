@@ -1,8 +1,9 @@
 <template>
   <v-container class="portfoliopage" title="Portfolio" subtitle="My Projects">
     <div class="row">
-      <div class="col-lg-12 d-flex justify-content-center">
-        <project-filters :options="availableFilters" v-model="activeFilter"></project-filters>
+      <div class="col-lg-9"></div>
+      <div class="col-lg-3 d-flex justify-content-center">
+        <v-select v-model="activeFilter" :options="availableFilters"></v-select>
       </div>
     </div>
     <div class="row">
@@ -15,9 +16,8 @@
 import { computed, ref } from "vue"
 import { info } from "@/assets/info"
 import ProjectCard from "@/components/ProjectCard.vue"
-import ProjectFilters from "@/components/ProjectFilters.vue"
 
-const FILTER_ALLOW_ALL = "all"
+const FILTER_ALLOW_ALL = "All"
 const activeFilter = ref<string>(FILTER_ALLOW_ALL)
 
 const availableFilters = info.projects.reduce((filters, project) => {
@@ -28,7 +28,7 @@ const availableFilters = info.projects.reduce((filters, project) => {
 
 const filteredProjects = computed(() => {
   return info.projects.filter((project) => {
-    if (activeFilter.value.toLowerCase() === FILTER_ALLOW_ALL) {
+    if (activeFilter.value.toLowerCase() === FILTER_ALLOW_ALL.toLowerCase()) {
       return true
     }
     const filterInTags = project.tags.some((tag) => activeFilter.value.toLowerCase() === tag.toLowerCase())
