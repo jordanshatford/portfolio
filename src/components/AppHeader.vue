@@ -1,6 +1,6 @@
 <template>
   <header class="app-header">
-    <div class="container">
+    <div class="app-header__container">
       <h1>
         <router-link :to="RouteNameConstants.ABOUT">Jordan Shatford</router-link>
       </h1>
@@ -42,11 +42,11 @@ import { RouteNameConstants } from "@/router"
       text-decoration: none;
     }
   }
-  .container {
+  &__container {
     display: flex;
     align-items: center;
-    padding-right: 2rem;
-    padding-left: 2rem;
+    padding-right: 0.6rem;
+    padding-left: 0.6rem;
     margin-right: auto;
     margin-left: auto;
     width: 1320px;

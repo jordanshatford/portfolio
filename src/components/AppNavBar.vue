@@ -1,14 +1,14 @@
 <template>
-  <nav id="navbar" class="navbar" :class="{ 'navbar-mobile': showMobileMenu }">
+  <nav class="app-navbar" :class="{ 'app-navbar__mobile': showMobileMenu }">
     <ul>
       <li v-for="r in routes" :key="r.path" @click="showMobileMenu = false">
-        <router-link class="nav-link" :class="{ active: r.name === route.name }" :to="r.name">{{
+        <router-link class="app-navbar__link" :class="{ active: r.name === route.name }" :to="r.name">{{
           r.meta?.title
         }}</router-link>
       </li>
     </ul>
     <component
-      class="mobile-nav-toggle"
+      class="app-navbar__mobile__toggle"
       :is="showMobileMenu ? PhX : PhList"
       @click="showMobileMenu = !showMobileMenu"
       :size="28"
@@ -29,7 +29,7 @@ const showMobileMenu = ref<boolean>(false)
 
 <style scoped lang="scss">
 @import "@/assets/scss/abstracts/variables";
-.navbar {
+.app-navbar {
   padding: 0;
   margin: 0;
   ul {
@@ -85,7 +85,7 @@ const showMobileMenu = ref<boolean>(false)
     color: $color-white;
   }
 }
-.mobile-nav-toggle {
+.app-navbar__mobile__toggle {
   color: $color-white;
   cursor: pointer;
   display: none;
@@ -99,7 +99,7 @@ const showMobileMenu = ref<boolean>(false)
   }
 }
 
-.navbar-mobile {
+.app-navbar__mobile {
   position: fixed;
   overflow: hidden;
   top: 0;
@@ -110,7 +110,7 @@ const showMobileMenu = ref<boolean>(false)
   transition: 0.3s;
   z-index: 999;
   margin-top: 0;
-  .mobile-nav-toggle {
+  &__toggle {
     position: absolute;
     top: 1rem;
     right: 1rem;
