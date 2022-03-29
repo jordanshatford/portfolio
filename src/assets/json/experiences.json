@@ -10,7 +10,10 @@
       }
     ],
     "descriptions": [
-      "Development on a full stack project utilizing Vue.js, Typescript, SCSS, and C++. Performing code reviews on others work. Refactoring code to reduce duplication, increase code quality and ensure easier maintainability."
+      "Development on a full stack project utilizing Vue.js, Typescript, SCSS, and C++. Performing code reviews on others work. Refactoring code to reduce duplication, increase code quality and ensure easier maintainability.",
+      "Defined unit tests to ensure frontend functionality was as expected. Performed dependency management to ensure external packages are up to date. Refactored and removed code which was confusing or no longer needed.",
+      "Developed visual graphics using p5.js to display important information to use the user.",
+      "Mentored a coop student on their progress and how to improve their skills. As well as introduced them to the project and how it functions."
     ]
   },
   {
@@ -31,6 +34,10 @@
         "end": "December 1, 2020"
       }
     ],
-    "descriptions": []
+    "descriptions": [
+      "Term 1: Developed a C++ plugin which would be used to provide critical information from transmitter hardware to the end user through a shared resource system. Participated in bi-weekly sprint meetings and daily standups.",
+      "Term 2: Development on an internal Django project used to generate configuration files and code for each product and model. This provided unified and consistent constants across all plugins developed. Performed code reviews on others work.",
+      "Term 3: Refactoring Vue.js and Typescript code to allow reusability and improve maintainability. This resulted in the removal of over 500 lines of code and the reuse of abstracted code in many places. Refactored Sass styling throughout all components of a Vue.js project to ensure proper Sass guidelines were followed."
+    ]
   }
 ]
