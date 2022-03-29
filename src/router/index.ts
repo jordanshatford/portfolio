@@ -55,6 +55,9 @@ const router = createRouter({
       redirect: { name: RouteNameConstants.ABOUT },
     },
   ],
+  scrollBehavior() {
+    return { top: -1 }
+  },
 })
 
 export default router
