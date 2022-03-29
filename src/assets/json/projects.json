@@ -18,7 +18,7 @@
     "languages": ["Vue", "TypeScript"]
   },
   {
-    "name": "WordlistJS",
+    "name": "wordlist-js",
     "description": "A package to provide common English words from various dialects. These words are filtered and safe to use in many word games.",
     "repoUrl": "https://github.com/jordanshatford/wordlist-js",
     "homepageUrl": "https://www.npmjs.com/package/wordlist-js",

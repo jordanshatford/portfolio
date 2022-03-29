@@ -46,6 +46,9 @@ function emitUpdate(target: EventTarget | null) {
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
+    &:focus {
+      outline: 0;
+    }
   }
 }
 </style>

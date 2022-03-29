@@ -45,6 +45,26 @@ import { RouteNameConstants } from "@/router"
   .container {
     display: flex;
     align-items: center;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    margin-right: auto;
+    margin-left: auto;
+    width: 1320px;
+    @media (max-width: $breakpoint-sm) {
+      width: 100%;
+    }
+    @media (min-width: $breakpoint-sm) and (max-width: $breakpoint-md) {
+      width: 540px;
+    }
+    @media (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {
+      width: 720px;
+    }
+    @media (min-width: $breakpoint-lg) and (max-width: $breakpoint-xl) {
+      width: 960px;
+    }
+    @media (min-width: $breakpoint-xl) and (max-width: $breakpoint-xxl) {
+      width: 1140px;
+    }
   }
   @media (max-width: $breakpoint-md) {
     height: 60px;

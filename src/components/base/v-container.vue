@@ -1,5 +1,5 @@
 <template>
-  <div class="v-container container">
+  <div class="v-container">
     <div>
       <h2 class="v-container__title">{{ title }}</h2>
       <p v-if="subtitle" class="v-container__subtitle">{{ subtitle }}</p>
@@ -22,6 +22,26 @@ defineProps<Props>()
 .v-container {
   background: $color-grey-dark;
   padding: 2rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  margin-right: auto;
+  margin-left: auto;
+  width: 1320px;
+  @media (max-width: $breakpoint-sm) {
+    width: 100%;
+  }
+  @media (min-width: $breakpoint-sm) and (max-width: $breakpoint-md) {
+    width: 540px;
+  }
+  @media (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {
+    width: 720px;
+  }
+  @media (min-width: $breakpoint-lg) and (max-width: $breakpoint-xl) {
+    width: 960px;
+  }
+  @media (min-width: $breakpoint-xl) and (max-width: $breakpoint-xxl) {
+    width: 1140px;
+  }
   &__title {
     font-size: $font-base;
     font-weight: $font-bold;
