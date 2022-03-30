@@ -1,9 +1,7 @@
 <template>
-  <div class="skillcard col-lg-3 col-md-4">
-    <div class="skillcard__iconbox">
-      <simple-icon class="skillcard__iconbox__icon" :name="name" size="2rem"></simple-icon>
-      <h3>{{ name }}</h3>
-    </div>
+  <div class="skill-card">
+    <simple-icon class="skill-card__icon" :name="name" size="2rem"></simple-icon>
+    <h3 class="skill-card__text">{{ name }}</h3>
   </div>
 </template>
 
@@ -19,41 +17,23 @@ defineProps<Props>()
 
 <style scoped lang="scss">
 @import "@/assets/scss/abstracts/variables";
-.skillcard {
-  &__iconbox {
-    display: flex;
-    align-items: center;
-    padding: 1.2rem;
-    background: $color-grey;
-    transition: ease-in-out 0.3s;
-    &:hover {
-      background: $color-grey-light;
-    }
-    &__icon {
-      padding-right: 0.6rem;
-    }
-    h3 {
-      font-weight: $font-bold;
-      margin: 0;
-      padding: 0;
-      line-height: 1;
-      font-size: $font-base;
-    }
+.skill-card {
+  display: flex;
+  align-items: center;
+  padding: 1.2rem;
+  background: $color-grey;
+  &:hover {
+    background: $color-grey-light;
   }
-  @media (max-width: $breakpoint-md) {
-    &:nth-child(n + 2) {
-      margin-top: 1.5rem;
-    }
+  &__icon {
+    padding-right: 0.6rem;
   }
-  @media (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {
-    &:nth-child(n + 4) {
-      margin-top: 1.5rem;
-    }
-  }
-  @media (min-width: $breakpoint-lg) {
-    &:nth-child(n + 5) {
-      margin-top: 1.5rem;
-    }
+  &__text {
+    font-weight: $font-bold;
+    font-size: $font-base;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
   }
 }
 </style>

@@ -75,9 +75,9 @@ defineProps<Props>()
       }
       &__icon {
         color: $color-white !important;
-              &:hover {
-        color: $color-primary !important;
-      }
+        &:hover {
+          color: $color-primary !important;
+        }
       }
     }
   }

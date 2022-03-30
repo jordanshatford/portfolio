@@ -36,7 +36,9 @@
   </v-container>
   <v-container v-for="(attribute, index) in info.attributes" :title="attribute.title" :key="index">
     <div class="row">
-      <skill-card v-for="(skill, index) in attribute.values" :key="index" :name="skill" />
+      <div v-for="(skill, index) in attribute.values" :key="index" class="aboutpage__skill col-lg-3 col-md-4">
+        <skill-card :name="skill" />
+      </div>
     </div>
   </v-container>
 </template>
@@ -78,6 +80,23 @@ const age = computed<number>(() => {
     }
     p:last-child {
       margin-bottom: 0;
+    }
+  }
+  &__skill {
+    @media (max-width: $breakpoint-md) {
+      &:nth-child(n + 2) {
+        margin-top: 1.5rem;
+      }
+    }
+    @media (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {
+      &:nth-child(n + 4) {
+        margin-top: 1.5rem;
+      }
+    }
+    @media (min-width: $breakpoint-lg) {
+      &:nth-child(n + 5) {
+        margin-top: 1.5rem;
+      }
     }
   }
 }
