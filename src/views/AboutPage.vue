@@ -2,9 +2,9 @@
   <v-container class="aboutpage" title="About" subtitle="About Me">
     <div class="row">
       <div class="col-lg-4">
-        <img :src="info.pictureUrl" class="img-fluid w-100" alt="profile picture" />
+        <img :src="info.pictureUrl" class="aboutpage__image" alt="profile picture" />
       </div>
-      <div class="col-lg-8 pt-4 pt-lg-0 aboutpage__description">
+      <div class="aboutpage__description col-lg-8 pt-4 pt-lg-0">
         <h3>
           {{ info.job.title }} <span v-if="info.job.organization">at {{ info.job.organization }}</span>
         </h3>
@@ -56,6 +56,9 @@ const age = computed<number>(() => {
 <style scoped lang="scss">
 @import "@/assets/scss/abstracts/variables";
 .aboutpage {
+  &__image {
+    width: 100%;
+  }
   &__description {
     &__job {
       color: $color-grey-lightest;
