@@ -4,7 +4,13 @@
       <v-select v-model="activeFilter" :options="availableFilters" class="portfolio-page__filter__select"></v-select>
     </div>
     <div class="row">
-      <project-card v-for="(project, index) of filteredProjects" :key="index" :project="project"></project-card>
+      <div
+        v-for="(project, index) of filteredProjects"
+        :key="index"
+        class="portfolio-page__project col-lg-4 col-md-6 d-flex align-items-stretch"
+      >
+        <project-card :project="project"></project-card>
+      </div>
     </div>
   </v-container>
 </template>
@@ -50,6 +56,23 @@ const filteredProjects = computed(() => {
       }
       @media (max-width: $breakpoint-md) {
         flex-basis: 100%;
+      }
+    }
+  }
+  &__project {
+    @media (max-width: $breakpoint-md) {
+      &:nth-child(n + 2) {
+        margin-top: 1.5rem;
+      }
+    }
+    @media (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {
+      &:nth-child(n + 3) {
+        margin-top: 1.5rem;
+      }
+    }
+    @media (min-width: $breakpoint-lg) {
+      &:nth-child(n + 4) {
+        margin-top: 1.5rem;
       }
     }
   }
