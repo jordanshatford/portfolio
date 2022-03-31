@@ -13,7 +13,7 @@ withDefaults(defineProps<Props>(), { variant: "primary" })
 <style scoped lang="scss">
 @import "@/assets/scss/abstracts/variables";
 .v-alert {
-  padding: 15px;
+  padding: 1rem;
   border-radius: $border-radius-base;
   &--primary {
     background: $color-primary;  }
