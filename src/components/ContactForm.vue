@@ -15,9 +15,9 @@
       <v-textarea name="message" :rows="5" placeholder="Message" required v-model="form.message"></v-textarea>
     </div>
     <div class="contactform__alert">
-      <div v-if="isSending" class="contactform__alert--loading">Sending...</div>
-      <div v-if="hasErrorSending" class="contactform__alert--error">Error Sending Message</div>
-      <div v-if="hasSuccessSending" class="contactform__alert--success">Your message has been sent</div>
+      <v-alert v-if="isSending" variant="secondary">Sending...</v-alert>
+      <v-alert v-if="hasErrorSending" variant="danger">Error sending message.</v-alert>
+      <v-alert v-if="hasSuccessSending" variant="success">Message sent!</v-alert>
     </div>
     <div class="mt-3 text-center"><v-button :disabled="isSending" type="submit">Send Message</v-button></div>
   </form>
@@ -68,23 +68,12 @@ function onSubmit() {
 @import "@/assets/scss/abstracts/variables";
 .contactform {
   padding: 30px;
+  border-radius: 0.5rem;
   background: $color-grey;
   &__alert {
     margin-top: 1rem;
     text-align: left;
     font-weight: $font-bold;
-    &--error {
-      padding: 15px;
-      background: $color-error;
-    }
-    &--success {
-      padding: 15px;
-      background: $color-success;
-    }
-    &--loading {
-      padding: 15px;
-      background: $color-grey-lightest;
-    }
   }
 }
 </style>

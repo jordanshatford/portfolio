@@ -8,6 +8,7 @@ import TextArea from "@/components/base/v-textarea.vue"
 import Select from "@/components/base/v-select.vue"
 import Button from "@/components/base/v-button.vue"
 import Badge from "@/components/base/v-badge.vue"
+import Alert from "@/components/base/v-alert.vue"
 
 const app = createApp(App)
 app.component("v-container", Container)
@@ -16,5 +17,6 @@ app.component("v-select", Select)
 app.component("v-textarea", TextArea)
 app.component("v-button", Button)
 app.component("v-badge", Badge)
+app.component("v-alert", Alert)
 app.use(router)
 app.mount("#app")
