@@ -27,7 +27,7 @@ function emitUpdate(target: EventTarget | null) {
 </script>
 
 <style scoped lang="scss">
-@import "@/assets/scss/abstracts/mixins";
+@import "@/assets/scss/abstracts/variables";
 
 .v-select {
   width: 100%;
@@ -41,15 +41,32 @@ function emitUpdate(target: EventTarget | null) {
     color: $color-grey-lightest;
   }
   select {
-    @include base-input-style;
     width: 100%;
     padding: 0.75rem 1.25rem;
     border-radius: $border-radius-base;
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
+    box-shadow: none;
+    font-size: $font-base;
+    background: $color-grey-light;
+    border: 0;
+    transition: 0.3s;
+    color: $color-white;
     &:focus {
+      color: $color-white;
+      border: 0;
       outline: 0;
+      box-shadow: none;
+      background-color: $color-grey-lighter;
+    }
+    &::-moz-placeholder {
+      color: $color-grey-lightest;
+      opacity: 1;
+    }
+    &::placeholder {
+      color: $color-grey-lightest;
+      opacity: 1;
     }
   }
 }
