@@ -77,7 +77,7 @@ defineProps<Props>()
       position: absolute;
       width: 16px;
       height: 16px;
-      border-radius: 50px;
+      border-radius: $border-radius-base;
       left: -9px;
       top: 0;
       background: $color-primary;

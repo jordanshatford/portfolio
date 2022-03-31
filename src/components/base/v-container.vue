@@ -21,6 +21,7 @@ defineProps<Props>()
 @import "@/assets/scss/abstracts/variables";
 .v-container {
   background: $color-grey-dark;
+  border-radius: $border-radius-base;
   padding: 2rem;
   padding-right: 2rem;
   padding-left: 2rem;

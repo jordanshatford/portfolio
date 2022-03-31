@@ -33,6 +33,7 @@ function emitUpdate(target: EventTarget | null) {
   width: 100%;
   position: relative;
   padding-bottom: 10px;
+  border-radius: $border-radius-base;
   &__icon {
     top: 0.7rem;
     right: 1rem;
@@ -43,6 +44,7 @@ function emitUpdate(target: EventTarget | null) {
     @include base-input-style;
     width: 100%;
     padding: 0.75rem 1.25rem;
+    border-radius: $border-radius-base;
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;

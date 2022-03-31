@@ -46,11 +46,13 @@ defineProps<Props>()
   width: 100%;
   text-align: center;
   background: $color-grey;
+  border-radius: $border-radius-base;
   padding: 2rem 1.25rem;
   &__image {
     width: 100%;
     height: auto;
     border: 0.125rem solid $color-primary;
+    border-radius: $border-radius-base;
     margin-bottom: 1.25rem;
   }
   &__title {

@@ -68,7 +68,7 @@ function onSubmit() {
 @import "@/assets/scss/abstracts/variables";
 .contactform {
   padding: 30px;
-  border-radius: 0.5rem;
+  border-radius: $border-radius-base;
   background: $color-grey;
   &__alert {
     margin-top: 1rem;

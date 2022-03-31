@@ -24,6 +24,7 @@ function emitUpdate(target: EventTarget | null) {
 .v-textarea {
   @include base-input-style;
   padding: 0.85rem 1.25rem;
+  border-radius: $border-radius-base;
   width: 100%;
   &:focus {
     outline: 0;

@@ -8,6 +8,7 @@
   font-size: $font-sm;
   font-weight: $font-bold;
   background: $color-grey-light;
+  border-radius: $border-radius-base;
   display: inline-block;
   padding: 0.4rem 0.8rem;
   margin-bottom: 0.5rem;

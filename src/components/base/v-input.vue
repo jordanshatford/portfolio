@@ -24,6 +24,7 @@ function emitUpdate(target: EventTarget | null) {
   @include base-input-style;
   padding: 0.75rem 1.25rem;
   width: 100%;
+  border-radius: $border-radius-base;
   &:focus {
     outline: 0;
   }

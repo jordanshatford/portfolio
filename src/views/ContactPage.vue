@@ -49,11 +49,12 @@ import ContactForm from "@/components/ContactForm.vue"
     &__container {
       color: #444444;
       padding: 20px;
+      border-radius: $border-radius-base;
       width: 100%;
       background: $color-grey;
       svg {
         color: $color-primary;
-        border-radius: 50%;
+        border-radius: $border-radius-base;
         padding: 14px;
         float: left;
         background: $color-grey-light;

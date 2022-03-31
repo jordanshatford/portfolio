@@ -60,6 +60,7 @@ const age = computed<number>(() => {
 .aboutpage {
   &__image {
     width: 100%;
+    border-radius: $border-radius-base;
   }
   &__description {
     &__job {

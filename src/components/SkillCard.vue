@@ -22,6 +22,7 @@ defineProps<Props>()
   align-items: center;
   padding: 1.2rem;
   background: $color-grey;
+  border-radius: $border-radius-base;
   &:hover {
     background: $color-grey-light;
   }

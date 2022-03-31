@@ -1,7 +1,7 @@
 @import 'variables';
 
 @mixin base-input-style {
-  border-radius: 0;
+  border-radius: $border-radius-base;
   box-shadow: none;
   font-size: $font-base;
   background: $color-grey-light;

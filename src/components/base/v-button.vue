@@ -12,7 +12,7 @@
   border: 0;
   padding: 0.75rem 1.5rem;
   transition: 0.4s;
-  border-radius: 0.25rem;
+  border-radius: $border-radius-base;
   &:hover {
     background: $color-primary-accent;
   }
