@@ -21,12 +21,19 @@ defineProps<Props>()
 @import "@/assets/scss/abstracts/variables";
 .v-container {
   background: $color-grey-dark;
-  border-radius: $border-radius-base;
   padding: 2rem;
   padding-right: 2rem;
   padding-left: 2rem;
   margin-right: auto;
   margin-left: auto;
+  &:first-child {
+    border-top-left-radius: $border-radius-base;
+    border-top-right-radius: $border-radius-base;
+  }
+  &:last-child {
+    border-bottom-left-radius: $border-radius-base;
+    border-bottom-right-radius: $border-radius-base;
+  }
   width: 1320px;
   @media (max-width: $breakpoint-sm) {
     width: 100%;
