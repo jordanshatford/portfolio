@@ -1,12 +1,17 @@
 [
   {
-    "title": "Skills",
+    "title": "Top Skills",
     "values": [
       "Git",
       "TypeScript",
       "Vue.js",
       "JavaScript",
-      "Python",
+      "Python"
+    ]
+  },
+  {
+    "title": "Other Skills",
+    "values": [
       "HTML5",
       "Django",
       "Svelte",
@@ -15,7 +20,8 @@
       "Docker",
       "Sass",
       "CSS3",
-      "C++"
+      "C++",
+      "Pug"
     ]
   },
   {
