@@ -47,7 +47,7 @@ import ContactForm from "@/components/ContactForm.vue"
       }
     }
     &__container {
-      padding: 20px;
+      padding: 1rem;
       border-radius: $border-radius-base;
       width: 100%;
       background: $color-grey;

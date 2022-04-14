@@ -47,7 +47,7 @@ defineProps<Props>()
   text-align: center;
   background: $color-grey;
   border-radius: $border-radius-base;
-  padding: 2rem 1.25rem;
+  padding: 1rem;
   &__image {
     width: 100%;
     height: auto;

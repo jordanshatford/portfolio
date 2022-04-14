@@ -20,7 +20,7 @@ defineProps<Props>()
 .skill-card {
   display: flex;
   align-items: center;
-  padding: 1.2rem;
+  padding: 1rem;
   background: $color-grey;
   border-radius: $border-radius-base;
   &:hover {
