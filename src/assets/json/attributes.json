@@ -4,6 +4,7 @@
     "values": [
       "Git",
       "TypeScript",
+      "React",
       "Vue.js",
       "JavaScript",
       "Python"
@@ -28,6 +29,7 @@
     "title": "Experience Using",
     "values": [
       "Linux",
+      "Next.JS",
       "Prettier",
       "ESLint",
       "pnpm",
