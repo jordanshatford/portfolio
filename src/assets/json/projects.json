@@ -18,6 +18,15 @@
     "languages": ["Vue", "TypeScript"]
   },
   {
+    "name": "Find Flix",
+    "description": "Easily find the next TV show or movie to watch! Discover what I enjoy watching.",
+    "repoUrl": "https://github.com/jordanshatford/findflix",
+    "homepageUrl": "https://findflix.vercel.app",
+    "imageUrl": "https://repository-images.githubusercontent.com/492878071/0421fee3-a3a8-4171-8d05-70c659551fed",
+    "tags": ["Web"],
+    "languages": ["React", "Next.js", "TypeScript"]
+  },
+  {
     "name": "wordlist-js",
     "description": "A package to provide common English words from various dialects. These words are filtered and safe to use in many word games.",
     "repoUrl": "https://github.com/jordanshatford/wordlist-js",

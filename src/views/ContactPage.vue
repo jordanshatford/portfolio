@@ -76,7 +76,7 @@ import ContactForm from "@/components/ContactForm.vue"
   &__sociallinks {
     margin: 0 0 0 68px;
     &__link {
-      margin-right: 10px;
+      margin-right: 15px;
     }
     &__icon {
       color: $color-white !important;
