@@ -21,7 +21,7 @@
     "name": "Find Flix",
     "description": "Easily find the next TV show or movie to watch! Discover what I enjoy watching.",
     "repoUrl": "https://github.com/jordanshatford/findflix",
-    "homepageUrl": "https://findflix.vercel.app",
+    "homepageUrl": "https://findflixs.netlify.app",
     "imageUrl": "https://repository-images.githubusercontent.com/492878071/0421fee3-a3a8-4171-8d05-70c659551fed",
     "tags": ["Web"],
     "languages": ["React", "Next.js", "TypeScript"]
@@ -48,7 +48,7 @@
     "name": "Portfolio",
     "description": "A personal portfolio website for myself. Used to showcase my skills and projects.",
     "repoUrl": "https://github.com/jordanshatford/portfolio",
-    "homepageUrl": "https://jordanshatford.vercel.app/",
+    "homepageUrl": "https://jordanshatford.vercel.app",
     "imageUrl": "https://repository-images.githubusercontent.com/470738243/6f859a6e-db64-4477-899f-9b4445226566",
     "tags": ["Web"],
     "languages": ["Vue", "TypeScript", "Sass"]
