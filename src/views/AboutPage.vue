@@ -34,7 +34,12 @@
       </div>
     </div>
   </v-container>
-  <v-container v-for="(attribute, index) in info.attributes" :title="attribute.title" :key="index" class="aboutpage__attribute">
+  <v-container
+    v-for="(attribute, index) in info.attributes"
+    :title="attribute.title"
+    :key="index"
+    class="aboutpage__attribute"
+  >
     <div class="row">
       <div v-for="(skill, index) in attribute.values" :key="index" class="aboutpage__skill col-lg-3 col-md-4">
         <skill-card :name="skill" />

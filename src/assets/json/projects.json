@@ -36,6 +36,15 @@
     "languages": ["TypeScript", "Mustache"]
   },
   {
+    "name": "Gameboy R",
+    "description": "A Gameboy emulator written in Rust. Provides support for Gameboy and Gameboy Color.",
+    "repoUrl": "https://github.com/jordanshatford/gameboy-r",
+    "homepageUrl": "https://crates.io/crates/gameboyr",
+    "imageUrl": "https://repository-images.githubusercontent.com/507713513/a5ff6b18-4bfc-4435-8d84-f16ab9ae1eae",
+    "tags": ["Packages"],
+    "languages": ["Rust"]
+  },
+  {
     "name": "VVurdle",
     "description": "A Wordle clone written in VueJS. Allows selecting between a variety of word lengths.",
     "repoUrl": "https://github.com/jordanshatford/vvurdle",

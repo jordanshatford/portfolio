@@ -16,7 +16,8 @@ withDefaults(defineProps<Props>(), { variant: "primary" })
   padding: 1rem;
   border-radius: $border-radius-base;
   &--primary {
-    background: $color-primary;  }
+    background: $color-primary;
+  }
   &--secondary {
     background: $color-grey-lightest;
   }
