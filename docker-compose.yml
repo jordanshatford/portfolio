@@ -7,12 +7,11 @@ services:
     image: portfolio:latest
     restart: always
     environment:
-      VITE_GITHUB_PERSONAL_ACCESS_TOKEN: ${VITE_GITHUB_PERSONAL_ACCESS_TOKEN}
       VITE_EMAILJS_TEMPLATE_ID: ${VITE_EMAILJS_TEMPLATE_ID}
       VITE_EMAILJS_USER_ID: ${VITE_EMAILJS_USER_ID}
       VITE_EMAILJS_SERVICE_ID: ${VITE_EMAILJS_SERVICE_ID}
     ports:
-      - 3000:3000
+      - 5173:5173
       - 24678:24678
     volumes:
       - .:/app
