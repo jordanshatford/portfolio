@@ -9,10 +9,8 @@
     </ul>
     <component
       class="app-navbar__mobile__toggle"
-      :is="showMobileMenu ? PhX : PhList"
+      :is="showMobileMenu ? XIcon : MenuIcon"
       @click="showMobileMenu = !showMobileMenu"
-      :size="28"
-      weight="bold"
     ></component>
   </nav>
 </template>
@@ -20,7 +18,7 @@
 <script setup lang="ts">
 import { ref } from "vue"
 import { useRoute } from "vue-router"
-import { PhList, PhX } from "phosphor-vue"
+import { MenuIcon, XIcon } from "@heroicons/vue/outline"
 import { routes } from "@/router"
 
 const route = useRoute()
@@ -92,6 +90,7 @@ const showMobileMenu = ref<boolean>(false)
   line-height: 0;
   transition: 0.5s;
   position: fixed;
+  width: 28px;
   right: 15px;
   top: 15px;
   @media (max-width: $breakpoint-md) {

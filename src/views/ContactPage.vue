@@ -3,14 +3,14 @@
     <div class="row mt-2">
       <div class="contactpage__col col-md-6 d-flex align-items-stretch">
         <div class="contactpage__col__container">
-          <ph-envelope-simple :size="56" weight="bold"></ph-envelope-simple>
+          <mail-icon style="width: 55px"></mail-icon>
           <h3>Email:</h3>
           <p>{{ info.email }}</p>
         </div>
       </div>
       <div class="contactpage__col col-md-6 d-flex align-items-stretch">
         <div class="contactpage__col__container">
-          <ph-share-network :size="56" weight="bold"></ph-share-network>
+          <share-icon style="width: 55px"></share-icon>
           <h3>Social Links:</h3>
           <div class="contactpage__sociallinks">
             <a
@@ -31,7 +31,7 @@
 </template>
 
 <script setup lang="ts">
-import { PhEnvelopeSimple, PhShareNetwork } from "phosphor-vue"
+import { MailIcon, ShareIcon } from "@heroicons/vue/outline"
 import { info } from "@/assets/info"
 import SimpleIcon from "@/components/SimpleIcon.vue"
 import ContactForm from "@/components/ContactForm.vue"

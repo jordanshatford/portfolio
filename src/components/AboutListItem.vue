@@ -1,12 +1,12 @@
 <template>
   <li class="about-list-item">
-    <ph-caret-right :size="20" weight="bold" class="about-list-item__icon"></ph-caret-right>
+    <chevron-right-icon class="about-list-item__icon"></chevron-right-icon>
     <strong>{{ title }}:</strong> <span>{{ value }}</span>
   </li>
 </template>
 
 <script setup lang="ts">
-import { PhCaretRight } from "phosphor-vue"
+import { ChevronRightIcon } from "@heroicons/vue/outline"
 
 interface Props {
   title: string
@@ -24,6 +24,7 @@ defineProps<Props>()
   display: flex;
   align-items: center;
   &__icon {
+    width: 25px;
     margin-right: 0.3rem;
     color: $color-primary;
   }

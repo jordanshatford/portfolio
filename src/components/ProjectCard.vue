@@ -13,16 +13,16 @@
         <simple-icon name="github" size="28px" class="project-card__links__link__icon"></simple-icon>
       </a>
       <a v-if="project.homepageUrl" :href="project.homepageUrl" class="project-card__links__link" target="_blank">
-        <ph-arrow-square-out :size="28" class="project-card__links__link__icon">
+        <external-link-icon style="width: 28px" class="project-card__links__link__icon">
           <title>View</title>
-        </ph-arrow-square-out>
+        </external-link-icon>
       </a>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { PhArrowSquareOut } from "phosphor-vue"
+import { ExternalLinkIcon } from "@heroicons/vue/outline"
 import SimpleIcon from "@/components/SimpleIcon.vue"
 
 interface Props {

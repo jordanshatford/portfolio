@@ -1,6 +1,6 @@
 <template>
   <div class="v-select">
-    <ph-funnel class="v-select__icon" :size="24" weight="bold"></ph-funnel>
+    <filter-icon class="v-select__icon"></filter-icon>
     <select :value="modelValue" @input="emitUpdate($event.target)">
       <option v-for="option in options" :key="option">{{ option }}</option>
     </select>
@@ -8,7 +8,7 @@
 </template>
 
 <script setup lang="ts">
-import { PhFunnel } from "phosphor-vue"
+import { FilterIcon } from "@heroicons/vue/outline"
 
 interface Props {
   modelValue: string | number
@@ -35,6 +35,7 @@ function emitUpdate(target: EventTarget | null) {
   padding-bottom: 10px;
   border-radius: $border-radius-base;
   &__icon {
+    width: 25px;
     top: 0.7rem;
     right: 1rem;
     position: absolute;
