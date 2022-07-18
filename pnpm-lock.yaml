@@ -4,7 +4,7 @@ specifiers:
   '@emailjs/browser': ^3.4.0
   '@heroicons/vue': ^1.0.6
   '@rushstack/eslint-patch': ^1.1.1
-  '@types/node': ^16.11.26
+  '@types/node': ^18.0.6
   '@vitejs/plugin-vue': ^3.0.0
   '@vue/eslint-config-prettier': ^7.0.0
   '@vue/eslint-config-typescript': ^11.0.0
@@ -29,11 +29,11 @@ dependencies:
 
 devDependencies:
   '@rushstack/eslint-patch': 1.1.1
-  '@types/node': 16.11.26
+  '@types/node': 18.0.6
   '@vitejs/plugin-vue': 3.0.0_vite@3.0.0+vue@3.2.31
   '@vue/eslint-config-prettier': 7.0.0_j4zsohvph7mgdk6nfobbsfrdii
   '@vue/eslint-config-typescript': 11.0.0_qudwn6azu6ng2srjrhjgvy5b54
-  '@vue/tsconfig': 0.1.3_@types+node@16.11.26
+  '@vue/tsconfig': 0.1.3_@types+node@18.0.6
   eslint: 8.12.0
   eslint-plugin-vue: 9.2.0_eslint@8.12.0
   prettier: 2.6.1
@@ -152,8 +152,8 @@ packages:
     resolution: {integrity: sha512-wOuvG1SN4Us4rez+tylwwwCV1psiNVOkJeM3AUWUNWg/jDQY2+HE/444y5gc+jBmRqASOm2Oeh5c1axHobwRKQ==}
     dev: true
 
-  /@types/node/16.11.26:
-    resolution: {integrity: sha512-GZ7bu5A6+4DtG7q9GsoHXy3ALcgeIHP4NnL0Vv2wu0uUB/yQex26v0tf6/na1mm0+bS9Uw+0DFex7aaKr2qawQ==}
+  /@types/node/18.0.6:
+    resolution: {integrity: sha512-/xUq6H2aQm261exT6iZTMifUySEt4GR5KX8eYyY+C4MSNPqSh9oNIP7tz2GLKTlFaiBbgZNxffoR3CVRG+cljw==}
     dev: true
 
   /@typescript-eslint/eslint-plugin/5.16.0_7vcdk2v3sf3t6tzd2ngvt75tvu:
@@ -465,7 +465,7 @@ packages:
   /@vue/shared/3.2.31:
     resolution: {integrity: sha512-ymN2pj6zEjiKJZbrf98UM2pfDd6F2H7ksKw7NDt/ZZ1fh5Ei39X5tABugtT03ZRlWd9imccoK0hE8hpjpU7irQ==}
 
-  /@vue/tsconfig/0.1.3_@types+node@16.11.26:
+  /@vue/tsconfig/0.1.3_@types+node@18.0.6:
     resolution: {integrity: sha512-kQVsh8yyWPvHpb8gIc9l/HIDiiVUy1amynLNpCy8p+FoCiZXCo6fQos5/097MmnNZc9AtseDsCrfkhqCrJ8Olg==}
     peerDependencies:
       '@types/node': '*'
@@ -473,7 +473,7 @@ packages:
       '@types/node':
         optional: true
     dependencies:
-      '@types/node': 16.11.26
+      '@types/node': 18.0.6
     dev: true
 
   /acorn-jsx/5.3.2_acorn@8.7.0:
